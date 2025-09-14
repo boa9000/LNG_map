@@ -12,9 +12,14 @@ gdf = gdf.join(gdf["param"].apply(pd.Series))
 pipes_in_europe = gpd.sjoin(gdf, europe, how='inner', predicate='intersects')
 pipes_in_europe = pipes_in_europe.rename(columns={"max_cap_M_m3_per_d": "Capacity in Million m^3/day", "NAME":"Country"})
 pipes_in_europe = pipes_in_europe[["name", "Country", "geometry", "diameter_mm", "Capacity in Million m^3/day"]]
+pipes_in_europe["Capacity in Million m^3/day"] = pipes_in_europe["Capacity in Million m^3/day"].round(3)
 
 os.makedirs("maps", exist_ok=True)
-for country in pipes_in_europe["Country"].unique():
+
+countries = pipes_in_europe["Country"].unique()
+countries.sort()
+
+for country in countries:
     bounds = pipes_in_europe[pipes_in_europe["Country"] == country].total_bounds
     lat = (bounds[1] + bounds[3]) / 2
     lon = (bounds[0] + bounds[2]) / 2
@@ -26,7 +31,7 @@ for country in pipes_in_europe["Country"].unique():
     style_kwds={"weight": 3}, 
     tiles="CartoDB positron",
     location=[lat, lon],
-    zoom_start=7,
+    zoom_start=6,
     )
     m.save(f"maps/pipes_map_{country}.html")
 
@@ -83,11 +88,11 @@ document.getElementsByClassName('tablinks')[0].click();
 
 body1 = ""
 body2 = ""
-for country in pipes_in_europe["Country"].unique():
+for country in countries:
     body1 += f"""<button class="tablinks" onclick="openTab(event,'{country}')">{country}</button>\n"""
     body2 += f"""
 <div id="{country}" class="tabcontent">
-  <iframe src="pipes_map_{country}.html" width="100%" height="100%" loading="lazy"></iframe>
+  <iframe src="maps/pipes_map_{country}.html" width="100%" height="100%" loading="lazy"></iframe>
 </div>
 
 """
@@ -95,5 +100,5 @@ for country in pipes_in_europe["Country"].unique():
 
 html = header + body1 + body2 + footer
 
-with open("maps/all_pipelines_tabs.html", "w", encoding="utf-8") as f:
+with open("all_pipeline_maps.html", "w", encoding="utf-8") as f:
     f.write(html)
