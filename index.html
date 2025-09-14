@@ -18,6 +18,7 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; }
 
 <div class="tab">
 
+<button class="tablinks" onclick="openTab(event,'Germany')">Germany</button>
 <button class="tablinks" onclick="openTab(event,'Poland')">Poland</button>
 <button class="tablinks" onclick="openTab(event,'Belarus')">Belarus</button>
 <button class="tablinks" onclick="openTab(event,'Italy')">Italy</button>
@@ -37,7 +38,6 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; }
 <button class="tablinks" onclick="openTab(event,'Croatia')">Croatia</button>
 <button class="tablinks" onclick="openTab(event,'Czechia')">Czechia</button>
 <button class="tablinks" onclick="openTab(event,'Slovenia')">Slovenia</button>
-<button class="tablinks" onclick="openTab(event,'Germany')">Germany</button>
 <button class="tablinks" onclick="openTab(event,'Serbia')">Serbia</button>
 <button class="tablinks" onclick="openTab(event,'Austria')">Austria</button>
 <button class="tablinks" onclick="openTab(event,'Sweden')">Sweden</button>
@@ -55,6 +55,10 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; }
 <button class="tablinks" onclick="openTab(event,'North Macedonia')">North Macedonia</button>
 <button class="tablinks" onclick="openTab(event,'Norway')">Norway</button>
 
+<div id="Germany" class="tabcontent">
+  <iframe src="https://boa9000.github.io/LNG_map/maps/pipes_map_Germany.html" width="100%" height="100%" loading="lazy"></iframe>
+</div>
+  
 <div id="Poland" class="tabcontent">
   <iframe src="https://boa9000.github.io/LNG_map/maps/pipes_map_Poland.html" width="100%" height="100%" loading="lazy"></iframe>
 </div>
@@ -149,12 +153,7 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; }
   <iframe src="https://boa9000.github.io/LNG_map/maps/pipes_map_Slovenia.html" width="100%" height="100%" loading="lazy"></iframe>
 </div>
 
-
-<div id="Germany" class="tabcontent">
-  <iframe src="https://boa9000.github.io/LNG_map/maps/pipes_map_Germany.html" width="100%" height="100%" loading="lazy"></iframe>
-</div>
-
-
+  
 <div id="Serbia" class="tabcontent">
   <iframe src="https://boa9000.github.io/LNG_map/maps/pipes_map_Serbia.html" width="100%" height="100%" loading="lazy"></iframe>
 </div>
@@ -260,4 +259,5 @@ document.getElementsByClassName('tablinks')[0].click();
 
 </body>
 </html>
+
 
