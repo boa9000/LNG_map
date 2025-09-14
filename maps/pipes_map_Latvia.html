@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2e177425a657aae4976f4586614c9afb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2e177425a657aae4976f4586614c9afb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2e177425a657aae4976f4586614c9afb = L.map(
+                "map_2e177425a657aae4976f4586614c9afb",
+                {
+                    center: [56.974787500000005, 24.127015],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_2e177425a657aae4976f4586614c9afb);
+
+            
+
+        
+    
+            var tile_layer_769a9ae0985bc16a42f882c2596b0b0c = L.tileLayer(
+                "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_769a9ae0985bc16a42f882c2596b0b0c.addTo(map_2e177425a657aae4976f4586614c9afb);
+        
+    
+        function geo_json_3b96f5d3f4045ef90b34377c5859ab40_styler(feature) {
+            switch(feature.id) {
+                case "1066": case "1067": case "1184": case "1185": case "1186": case "1390": case "1391": case "1392": case "2128": case "3723": case "5215": case "5298": case "5561": case "5896": case "5918": case "6085": case "6244": case "6257": 
+                    return {"color": "#fde725", "fillColor": "#fde725", "fillOpacity": 0.5, "weight": 3};
+                case "1240": case "1241": 
+                    return {"color": "#470e61", "fillColor": "#470e61", "fillOpacity": 0.5, "weight": 3};
+                case "5891": 
+                    return {"color": "#440154", "fillColor": "#440154", "fillOpacity": 0.5, "weight": 3};
+                case "6173": 
+                    return {"color": "#46075a", "fillColor": "#46075a", "fillOpacity": 0.5, "weight": 3};
+                default:
+                    return {"color": "#25858e", "fillColor": "#25858e", "fillOpacity": 0.5, "weight": 3};
+            }
+        }
+        function geo_json_3b96f5d3f4045ef90b34377c5859ab40_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_3b96f5d3f4045ef90b34377c5859ab40_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 2,
+};
+            
+            let style = geo_json_3b96f5d3f4045ef90b34377c5859ab40_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_3b96f5d3f4045ef90b34377c5859ab40_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_3b96f5d3f4045ef90b34377c5859ab40.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_3b96f5d3f4045ef90b34377c5859ab40_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_3b96f5d3f4045ef90b34377c5859ab40 = L.geoJson(null, {
+                onEachFeature: geo_json_3b96f5d3f4045ef90b34377c5859ab40_onEachFeature,
+            
+                style: geo_json_3b96f5d3f4045ef90b34377c5859ab40_styler,
+                pointToLayer: geo_json_3b96f5d3f4045ef90b34377c5859ab40_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_3b96f5d3f4045ef90b34377c5859ab40_add (data) {
+            geo_json_3b96f5d3f4045ef90b34377c5859ab40
+                .addData(data);
+        }
+            geo_json_3b96f5d3f4045ef90b34377c5859ab40_add({"bbox": [21.25822, 55.997965, 26.99581, 57.95161], "features": [{"bbox": [24.72467, 56.94116, 24.81943, 57.10719], "geometry": {"coordinates": [[24.72467, 56.94116], [24.81943, 57.10719]], "type": "LineString"}, "id": "1066", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "ST_7047_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [24.36757, 56.94116, 24.72467, 56.96219], "geometry": {"coordinates": [[24.72467, 56.94116], [24.36757, 56.96219]], "type": "LineString"}, "id": "1067", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLM_2377_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [23.50008, 56.62862, 24.49791, 56.78123], "geometry": {"coordinates": [[23.50008, 56.78123], [24.49791, 56.62862]], "type": "LineString"}, "id": "1184", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLS_4860_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [21.25822, 56.49498, 21.90526, 56.60649], "geometry": {"coordinates": [[21.25822, 56.49498], [21.90526, 56.60649]], "type": "LineString"}, "id": "1185", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLS_4448_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [21.90526, 56.60649, 23.50008, 56.78123], "geometry": {"coordinates": [[21.90526, 56.60649], [23.50008, 56.78123]], "type": "LineString"}, "id": "1186", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLS_4448_Seg_0_Seg_2"}, "type": "Feature"}, {"bbox": [24.49791, 56.62862, 24.72467, 56.94116], "geometry": {"coordinates": [[24.72467, 56.94116], [24.49791, 56.62862]], "type": "LineString"}, "id": "1240", "properties": {"Capacity in Million m^3/day": 6.36, "Country": "Latvia", "__folium_color": "#470e61", "diameter_mm": 900.0, "name": "PLM_2376_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [24.36757, 56.94116, 24.72467, 56.96219], "geometry": {"coordinates": [[24.36757, 56.96219], [24.72467, 56.94116]], "type": "LineString"}, "id": "1241", "properties": {"Capacity in Million m^3/day": 6.36, "Country": "Latvia", "__folium_color": "#470e61", "diameter_mm": 900.0, "name": "PLS_5794_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [24.72467, 56.94116, 25.95432, 57.47629], "geometry": {"coordinates": [[24.72467, 56.94116], [25.95432, 57.47629]], "type": "LineString"}, "id": "1390", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLM_1836_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [25.658915, 57.47629, 25.95432, 57.70098], "geometry": {"coordinates": [[25.95432, 57.47629], [25.658915, 57.70098]], "type": "LineString"}, "id": "1391", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLM_2139_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [25.51682, 57.70098, 25.658915, 57.78607], "geometry": {"coordinates": [[25.658915, 57.70098], [25.51682, 57.78607]], "type": "LineString"}, "id": "1392", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLM_1549_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [25.44516, 57.69824, 25.658915, 57.70098], "geometry": {"coordinates": [[25.658915, 57.70098], [25.44516, 57.69824]], "type": "LineString"}, "id": "2128", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLM_1403_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [24.72467, 56.77811, 25.16034, 56.94116], "geometry": {"coordinates": [[24.72467, 56.94116], [25.16034, 56.77811]], "type": "LineString"}, "id": "3723", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLS_5795_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [24.60672, 57.12058, 24.696409, 57.169567], "geometry": {"coordinates": [[24.60672, 57.12058], [24.696409, 57.169567]], "type": "LineString"}, "id": "5215", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_117"}, "type": "Feature"}, {"bbox": [24.1788, 56.96219, 24.36757, 56.9904], "geometry": {"coordinates": [[24.36757, 56.96219], [24.1788, 56.9904]], "type": "LineString"}, "id": "5298", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_19"}, "type": "Feature"}, {"bbox": [24.2766, 56.918, 24.36757, 56.96219], "geometry": {"coordinates": [[24.36757, 56.96219], [24.2766, 56.918]], "type": "LineString"}, "id": "5561", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_250"}, "type": "Feature"}, {"bbox": [25.59511, 57.70098, 25.658915, 57.95161], "geometry": {"coordinates": [[25.59511, 57.95161], [25.658915, 57.70098]], "type": "LineString"}, "id": "5891", "properties": {"Capacity in Million m^3/day": 5.542, "Country": "Latvia", "__folium_color": "#440154", "diameter_mm": 900.0, "name": "PLM_1405_Seg_0_Seg_2_Seg_4"}, "type": "Feature"}, {"bbox": [24.27543, 57.12058, 24.60672, 57.20575], "geometry": {"coordinates": [[24.27543, 57.20575], [24.60672, 57.12058]], "type": "LineString"}, "id": "5896", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLM_1552_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [23.50008, 56.78123, 23.65917, 56.9798], "geometry": {"coordinates": [[23.50008, 56.78123], [23.65917, 56.9798]], "type": "LineString"}, "id": "5918", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLS_4029_Seg_0_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [21.90526, 56.3843, 22.1841, 56.60649], "geometry": {"coordinates": [[21.90526, 56.60649], [22.1841, 56.3843]], "type": "LineString"}, "id": "6085", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_467_Seg_1"}, "type": "Feature"}, {"bbox": [24.42295, 56.22492, 24.49791, 56.62862], "geometry": {"coordinates": [[24.49791, 56.62862], [24.42295, 56.22492]], "type": "LineString"}, "id": "6173", "properties": {"Capacity in Million m^3/day": 5.947, "Country": "Latvia", "__folium_color": "#46075a", "diameter_mm": 900.0, "name": "PLM_1665_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [25.95432, 57.47629, 26.99581, 57.5837], "geometry": {"coordinates": [[25.95432, 57.47629], [26.99581, 57.5837]], "type": "LineString"}, "id": "6203", "properties": {"Capacity in Million m^3/day": 15.704, "Country": "Latvia", "__folium_color": "#25858e", "diameter_mm": 900.0, "name": "PLM_1324_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [24.60672, 56.94116, 24.72467, 57.12058], "geometry": {"coordinates": [[24.60672, 57.12058], [24.72467, 56.94116]], "type": "LineString"}, "id": "6244", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLM_1552_Seg_0_Seg_1_Seg_0"}, "type": "Feature"}, {"bbox": [22.67914, 55.997965, 22.9993, 56.40778], "geometry": {"coordinates": [[22.67914, 55.997965], [22.9993, 56.40778]], "type": "LineString"}, "id": "6257", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Latvia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "PLS_4028_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_3b96f5d3f4045ef90b34377c5859ab40.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["diameter_mm", "Capacity in Million m^3/day"];
+    let aliases = ["diameter_mm", "Capacity in Million m^3/day"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_3b96f5d3f4045ef90b34377c5859ab40.addTo(map_2e177425a657aae4976f4586614c9afb);
+        
+    
+    var color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5 = {};
+
+    
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.color = d3.scale.threshold()
+              .domain([5.542, 5.5866232464929855, 5.631246492985972, 5.675869739478958, 5.720492985971943, 5.76511623246493, 5.8097394789579155, 5.854362725450902, 5.898985971943888, 5.943609218436873, 5.98823246492986, 6.032855711422846, 6.077478957915831, 6.122102204408818, 6.1667254509018035, 6.211348697394789, 6.255971943887776, 6.300595190380761, 6.345218436873747, 6.3898416833667335, 6.434464929859719, 6.479088176352706, 6.523711422845691, 6.568334669338677, 6.612957915831664, 6.657581162324649, 6.702204408817636, 6.7468276553106215, 6.791450901803607, 6.836074148296593, 6.880697394789579, 6.925320641282565, 6.9699438877755515, 7.014567134268537, 7.059190380761523, 7.103813627254509, 7.148436873747495, 7.193060120240482, 7.237683366733467, 7.282306613226453, 7.3269298597194386, 7.371553106212425, 7.416176352705411, 7.460799599198397, 7.505422845691383, 7.550046092184369, 7.594669338677354, 7.639292585170341, 7.683915831663327, 7.728539078156313, 7.773162324649299, 7.817785571142284, 7.862408817635271, 7.9070320641282565, 7.951655310621243, 7.996278557114229, 8.040901803607214, 8.085525050100202, 8.130148296593187, 8.174771543086173, 8.219394789579159, 8.264018036072144, 8.30864128256513, 8.353264529058116, 8.397887775551101, 8.442511022044089, 8.487134268537075, 8.53175751503006, 8.576380761523046, 8.621004008016033, 8.665627254509019, 8.710250501002005, 8.75487374749499, 8.799496993987976, 8.844120240480962, 8.888743486973949, 8.933366733466933, 8.97798997995992, 9.022613226452906, 9.067236472945892, 9.111859719438877, 9.156482965931865, 9.20110621242485, 9.245729458917836, 9.290352705410822, 9.334975951903807, 9.379599198396793, 9.42422244488978, 9.468845691382766, 9.513468937875752, 9.558092184368737, 9.602715430861725, 9.64733867735471, 9.691961923847696, 9.736585170340682, 9.781208416833667, 9.825831663326653, 9.870454909819639, 9.915078156312624, 9.959701402805612, 10.004324649298598, 10.048947895791583, 10.09357114228457, 10.138194388777556, 10.182817635270542, 10.227440881763528, 10.272064128256513, 10.316687374749499, 10.361310621242485, 10.405933867735472, 10.450557114228458, 10.495180360721443, 10.53980360721443, 10.584426853707416, 10.629050100200402, 10.673673346693388, 10.718296593186373, 10.762919839679359, 10.807543086172345, 10.85216633266533, 10.896789579158316, 10.941412825651302, 10.98603607214429, 11.030659318637275, 11.07528256513026, 11.119905811623248, 11.164529058116234, 11.20915230460922, 11.253775551102205, 11.29839879759519, 11.343022044088176, 11.387645290581162, 11.43226853707415, 11.476891783567135, 11.52151503006012, 11.566138276553108, 11.610761523046094, 11.65538476953908, 11.700008016032065, 11.74463126252505, 11.789254509018036, 11.833877755511022, 11.878501002004008, 11.923124248496995, 11.96774749498998, 12.012370741482968, 12.056993987975954, 12.10161723446894, 12.146240480961925, 12.19086372745491, 12.235486973947896, 12.280110220440882, 12.324733466933868, 12.369356713426853, 12.413979959919839, 12.458603206412826, 12.503226452905812, 12.547849699398798, 12.592472945891785, 12.63709619238477, 12.681719438877757, 12.726342685370742, 12.770965931863728, 12.815589178356714, 12.8602124248497, 12.904835671342685, 12.949458917835672, 12.994082164328658, 13.038705410821645, 13.083328657314631, 13.127951903807617, 13.172575150300602, 13.217198396793588, 13.261821643286574, 13.30644488977956, 13.351068136272545, 13.395691382765532, 13.440314629258518, 13.484937875751505, 13.529561122244491, 13.574184368737475, 13.618807615230462, 13.663430861723448, 13.708054108216434, 13.75267735470942, 13.797300601202405, 13.84192384769539, 13.886547094188378, 13.931170340681364, 13.97579358717435, 14.020416833667335, 14.06504008016032, 14.109663326653308, 14.154286573146294, 14.19890981963928, 14.243533066132265, 14.28815631262525, 14.332779559118237, 14.377402805611224, 14.42202605210421, 14.466649298597195, 14.511272545090181, 14.555895791583167, 14.600519038076154, 14.64514228456914, 14.689765531062125, 14.734388777555111, 14.779012024048097, 14.823635270541084, 14.86825851703407, 14.912881763527055, 14.957505010020041, 15.002128256513027, 15.046751503006014, 15.091374749499, 15.135997995991985, 15.180621242484971, 15.225244488977957, 15.269867735470944, 15.31449098196393, 15.359114228456916, 15.403737474949901, 15.448360721442887, 15.492983967935874, 15.53760721442886, 15.582230460921846, 15.626853707414831, 15.671476953907817, 15.716100200400804, 15.76072344689379, 15.805346693386776, 15.849969939879761, 15.894593186372747, 15.939216432865734, 15.98383967935872, 16.028462925851706, 16.073086172344688, 16.117709418837677, 16.16233266533066, 16.20695591182365, 16.251579158316634, 16.29620240480962, 16.340825651302605, 16.38544889779559, 16.43007214428858, 16.474695390781562, 16.51931863727455, 16.563941883767534, 16.608565130260523, 16.65318837675351, 16.697811623246494, 16.74243486973948, 16.787058116232465, 16.83168136272545, 16.876304609218437, 16.920927855711426, 16.965551102204408, 17.010174348697397, 17.05479759519038, 17.09942084168337, 17.144044088176354, 17.18866733466934, 17.233290581162326, 17.27791382765531, 17.3225370741483, 17.367160320641283, 17.411783567134272, 17.456406813627254, 17.501030060120243, 17.54565330661323, 17.590276553106214, 17.6348997995992, 17.679523046092186, 17.72414629258517, 17.768769539078157, 17.813392785571146, 17.85801603206413, 17.902639278557118, 17.9472625250501, 17.99188577154309, 18.036509018036075, 18.08113226452906, 18.125755511022046, 18.17037875751503, 18.215002004008017, 18.259625250501003, 18.304248496993992, 18.348871743486974, 18.393494989979963, 18.438118236472945, 18.482741482965935, 18.52736472945892, 18.571987975951906, 18.61661122244489, 18.661234468937877, 18.705857715430867, 18.75048096192385, 18.795104208416838, 18.83972745490982, 18.88435070140281, 18.928973947895795, 18.97359719438878, 19.018220440881763, 19.06284368737475, 19.107466933867734, 19.152090180360723, 19.19671342685371, 19.241336673346694, 19.28595991983968, 19.330583166332666, 19.375206412825655, 19.419829659318637, 19.464452905811626, 19.50907615230461, 19.553699398797598, 19.598322645290583, 19.64294589178357, 19.687569138276555, 19.73219238476954, 19.776815631262526, 19.82143887775551, 19.8660621242485, 19.910685370741483, 19.955308617234472, 19.999931863727454, 20.044555110220443, 20.08917835671343, 20.133801603206415, 20.1784248496994, 20.223048096192386, 20.26767134268537, 20.312294589178357, 20.356917835671346, 20.40154108216433, 20.446164328657318, 20.4907875751503, 20.53541082164329, 20.580034068136275, 20.62465731462926, 20.669280561122246, 20.71390380761523, 20.75852705410822, 20.803150300601203, 20.847773547094192, 20.892396793587174, 20.937020040080164, 20.98164328657315, 21.026266533066135, 21.07088977955912, 21.115513026052106, 21.160136272545092, 21.204759519038078, 21.249382765531067, 21.29400601202405, 21.338629258517038, 21.38325250501002, 21.42787575150301, 21.472498997995995, 21.51712224448898, 21.561745490981963, 21.606368737474952, 21.65099198396794, 21.695615230460923, 21.740238476953913, 21.784861723446895, 21.829484969939884, 21.874108216432866, 21.918731462925855, 21.963354709418837, 22.007977955911826, 22.05260120240481, 22.097224448897798, 22.14184769539078, 22.18647094188377, 22.23109418837676, 22.27571743486974, 22.32034068136273, 22.36496392785571, 22.4095871743487, 22.454210420841683, 22.498833667334672, 22.543456913827654, 22.588080160320644, 22.632703406813626, 22.677326653306615, 22.721949899799604, 22.766573146292586, 22.811196392785575, 22.855819639278558, 22.900442885771547, 22.94506613226453, 22.989689378757518, 23.0343126252505, 23.07893587174349, 23.12355911823647, 23.16818236472946, 23.21280561122245, 23.257428857715432, 23.30205210420842, 23.346675350701403, 23.391298597194393, 23.435921843687375, 23.480545090180364, 23.525168336673346, 23.569791583166335, 23.614414829659324, 23.659038076152306, 23.703661322645296, 23.748284569138278, 23.792907815631267, 23.83753106212425, 23.88215430861724, 23.92677755511022, 23.97140080160321, 24.01602404809619, 24.06064729458918, 24.10527054108217, 24.149893787575152, 24.19451703406814, 24.239140280561124, 24.283763527054113, 24.328386773547095, 24.373010020040084, 24.417633266533066, 24.462256513026055, 24.506879759519045, 24.551503006012027, 24.596126252505016, 24.640749498997998, 24.685372745490987, 24.72999599198397, 24.77461923847696, 24.81924248496994, 24.86386573146293, 24.908488977955912, 24.9531122244489, 24.99773547094189, 25.042358717434873, 25.08698196392786, 25.131605210420844, 25.176228456913833, 25.220851703406815, 25.265474949899804, 25.310098196392786, 25.354721442885776, 25.399344689378758, 25.443967935871747, 25.488591182364736, 25.53321442885772, 25.577837675350708, 25.62246092184369, 25.66708416833668, 25.71170741482966, 25.75633066132265, 25.800953907815632, 25.84557715430862, 25.89020040080161, 25.934823647294593, 25.979446893787582, 26.024070140280564, 26.068693386773553, 26.113316633266535, 26.157939879759525, 26.202563126252507, 26.247186372745496, 26.291809619238478, 26.336432865731467, 26.381056112224456, 26.42567935871744, 26.47030260521042, 26.51492585170341, 26.559549098196392, 26.60417234468938, 26.648795591182363, 26.693418837675353, 26.738042084168335, 26.782665330661324, 26.827288577154313, 26.871911823647295, 26.916535070140284, 26.961158316633266, 27.005781563126256, 27.050404809619238, 27.095028056112227, 27.13965130260521, 27.1842745490982, 27.22889779559118, 27.27352104208417, 27.31814428857716, 27.36276753507014, 27.40739078156313, 27.452014028056112, 27.4966372745491, 27.541260521042084, 27.585883767535073, 27.630507014028055, 27.675130260521044, 27.719753507014033, 27.764376753507015, 27.809000000000005])
+              .range(['#440154ff', '#440155ff', '#440256ff', '#440356ff', '#450457ff', '#450458ff', '#450559ff', '#450659ff', '#46075aff', '#46075bff', '#46085cff', '#46095cff', '#460a5dff', '#460a5eff', '#460b5eff', '#460c5fff', '#470d60ff', '#470d61ff', '#470e61ff', '#470f62ff', '#471063ff', '#471064ff', '#471164ff', '#471265ff', '#471365ff', '#481366ff', '#481467ff', '#481568ff', '#481668ff', '#481669ff', '#481769ff', '#48176aff', '#48186bff', '#48196cff', '#481a6cff', '#481a6dff', '#481b6dff', '#481c6eff', '#481c6eff', '#481d6fff', '#481d6fff', '#481f70ff', '#481f70ff', '#482071ff', '#482072ff', '#482173ff', '#482273ff', '#482374ff', '#482374ff', '#482475ff', '#482476ff', '#482576ff', '#482577ff', '#482677ff', '#482778ff', '#482878ff', '#482879ff', '#482979ff', '#47297aff', '#472a7aff', '#472b7aff', '#472c7aff', '#472c7bff', '#472d7bff', '#472d7cff', '#472e7cff', '#472e7dff', '#472f7dff', '#462f7eff', '#46307eff', '#46317eff', '#46327eff', '#46327fff', '#46337fff', '#463480ff', '#453480ff', '#453581ff', '#453581ff', '#453681ff', '#453781ff', '#453882ff', '#443882ff', '#443983ff', '#443983ff', '#443a83ff', '#443a83ff', '#443b84ff', '#433c84ff', '#433d84ff', '#433d85ff', '#433e85ff', '#423e85ff', '#423f85ff', '#423f86ff', '#424086ff', '#424086ff', '#424186ff', '#414187ff', '#414287ff', '#414387ff', '#414487ff', '#404488ff', '#404588ff', '#404588ff', '#404688ff', '#3f4688ff', '#3f4788ff', '#3f4789ff', '#3f4889ff', '#3e4889ff', '#3e4989ff', '#3e4a89ff', '#3e4a89ff', '#3e4b8aff', '#3d4c8aff', '#3d4d8aff', '#3d4d8aff', '#3d4e8aff', '#3c4e8aff', '#3c4f8aff', '#3c4f8aff', '#3c508bff', '#3b508bff', '#3b518bff', '#3b518bff', '#3b528bff', '#3a528bff', '#3a538bff', '#3a538bff', '#3a548cff', '#39548cff', '#39558cff', '#39558cff', '#39568cff', '#38578cff', '#38588cff', '#38588cff', '#38598cff', '#37598cff', '#375a8cff', '#375a8dff', '#375b8dff', '#365b8dff', '#365c8dff', '#365c8dff', '#365d8dff', '#355d8dff', '#355e8dff', '#355f8dff', '#355f8dff', '#34608dff', '#34608dff', '#34618dff', '#34618dff', '#33628dff', '#33628dff', '#33638dff', '#32638dff', '#32648eff', '#32648eff', '#32658eff', '#31658eff', '#31668eff', '#31668eff', '#31678eff', '#31678eff', '#31688eff', '#30688eff', '#30698eff', '#30698eff', '#306a8eff', '#2f6a8eff', '#2f6b8eff', '#2f6b8eff', '#2f6c8eff', '#2e6c8eff', '#2e6d8eff', '#2e6d8eff', '#2e6e8eff', '#2e6e8eff', '#2e6f8eff', '#2d6f8eff', '#2d708eff', '#2d708eff', '#2d718eff', '#2c718eff', '#2c718eff', '#2c728eff', '#2c728eff', '#2c738eff', '#2c738eff', '#2b748eff', '#2b748eff', '#2b758eff', '#2b758eff', '#2a768eff', '#2a768eff', '#2a778eff', '#2a778eff', '#2a788eff', '#29788eff', '#29798eff', '#29798eff', '#297a8eff', '#297a8eff', '#297b8eff', '#287b8eff', '#287c8eff', '#287c8eff', '#287d8eff', '#277d8eff', '#277e8eff', '#277e8eff', '#277f8eff', '#277f8eff', '#27808eff', '#26808eff', '#26818eff', '#26818eff', '#26828eff', '#26828eff', '#26828eff', '#25828eff', '#25838eff', '#25838eff', '#25848eff', '#25858eff', '#25858eff', '#24868eff', '#24868eff', '#24878eff', '#24878eff', '#23888eff', '#23888eff', '#23898eff', '#23898eff', '#238a8dff', '#238a8dff', '#228b8dff', '#228b8dff', '#228c8dff', '#228c8dff', '#228d8dff', '#218d8dff', '#218e8dff', '#218e8dff', '#218f8dff', '#218f8dff', '#21908dff', '#21908dff', '#21918cff', '#20918cff', '#20928cff', '#20928cff', '#20928cff', '#20928cff', '#20938cff', '#1f938cff', '#1f948cff', '#1f948cff', '#1f958bff', '#1f958bff', '#1f968bff', '#1f968bff', '#1f978bff', '#1f988bff', '#1f988bff', '#1f998bff', '#1f998aff', '#1f9a8aff', '#1f9a8aff', '#1e9b8aff', '#1e9b8aff', '#1e9c8aff', '#1e9c89ff', '#1e9d89ff', '#1e9d89ff', '#1e9e89ff', '#1f9e89ff', '#1f9f88ff', '#1f9f88ff', '#1fa088ff', '#1fa088ff', '#1fa188ff', '#1fa188ff', '#1fa187ff', '#1fa187ff', '#1fa287ff', '#1fa287ff', '#1fa386ff', '#20a386ff', '#20a486ff', '#20a486ff', '#20a585ff', '#21a585ff', '#21a685ff', '#21a685ff', '#21a785ff', '#22a785ff', '#22a884ff', '#22a884ff', '#22a983ff', '#23a983ff', '#23aa83ff', '#24ab83ff', '#25ab82ff', '#25ac82ff', '#25ac82ff', '#25ad82ff', '#26ad81ff', '#26ad81ff', '#27ad81ff', '#27ae81ff', '#28ae80ff', '#28af80ff', '#29af7fff', '#29b07fff', '#2ab07fff', '#2bb17eff', '#2cb17eff', '#2cb27dff', '#2db27dff', '#2db37cff', '#2eb37cff', '#2eb47cff', '#2fb47cff', '#30b57bff', '#31b57bff', '#31b67aff', '#32b67aff', '#33b679ff', '#34b679ff', '#34b779ff', '#35b779ff', '#36b878ff', '#37b878ff', '#37b977ff', '#38b977ff', '#39ba76ff', '#3aba76ff', '#3abb75ff', '#3bbb75ff', '#3cbc74ff', '#3dbc74ff', '#3ebc73ff', '#3fbd73ff', '#40bd72ff', '#40be72ff', '#41be71ff', '#42bf71ff', '#43bf70ff', '#45c070ff', '#46c06fff', '#47c16fff', '#48c16eff', '#49c16eff', '#4ac16dff', '#4bc26cff', '#4cc26cff', '#4dc36bff', '#4ec36bff', '#4fc46aff', '#50c46aff', '#51c569ff', '#52c569ff', '#53c568ff', '#54c568ff', '#55c667ff', '#56c667ff', '#57c766ff', '#58c765ff', '#59c864ff', '#5ac864ff', '#5bc863ff', '#5cc863ff', '#5dc962ff', '#5ec962ff', '#5fca61ff', '#60ca60ff', '#62cb5fff', '#63cb5fff', '#64cb5eff', '#65cc5dff', '#66cc5cff', '#67cd5cff', '#68cd5bff', '#6acd5bff', '#6bcd5aff', '#6cce59ff', '#6ece58ff', '#6fcf58ff', '#70cf57ff', '#71d057ff', '#72d056ff', '#74d055ff', '#75d054ff', '#76d153ff', '#77d153ff', '#78d152ff', '#7ad151ff', '#7bd250ff', '#7cd250ff', '#7dd34fff', '#7fd34eff', '#80d34dff', '#81d34dff', '#82d44cff', '#84d44bff', '#85d54aff', '#86d549ff', '#88d548ff', '#89d548ff', '#8ad647ff', '#8bd646ff', '#8dd645ff', '#8ed645ff', '#8fd744ff', '#90d743ff', '#92d742ff', '#93d741ff', '#94d840ff', '#96d83fff', '#97d83eff', '#99d93dff', '#9ad93cff', '#9bd93cff', '#9dd93bff', '#9eda3aff', '#9fda39ff', '#a1da38ff', '#a2da37ff', '#a3db36ff', '#a4db36ff', '#a6db35ff', '#a8db34ff', '#a9dc33ff', '#aadc32ff', '#abdc31ff', '#addc30ff', '#aedd2fff', '#b0dd2fff', '#b1dd2eff', '#b2dd2dff', '#b3de2cff', '#b5de2bff', '#b6de2aff', '#b8de29ff', '#b9de28ff', '#bade28ff', '#bcdf27ff', '#bddf26ff', '#bfdf25ff', '#c0df25ff', '#c1df24ff', '#c2df23ff', '#c4e022ff', '#c5e021ff', '#c7e020ff', '#c8e020ff', '#c9e11fff', '#cbe11eff', '#cce11dff', '#cee11dff', '#cfe11cff', '#d1e11bff', '#d2e21bff', '#d3e21aff', '#d4e21aff', '#d6e219ff', '#d7e219ff', '#d9e319ff', '#dae319ff', '#dbe318ff', '#dde318ff', '#dee318ff', '#dfe318ff', '#e0e418ff', '#e2e418ff', '#e3e418ff', '#e5e418ff', '#e6e419ff', '#e7e419ff', '#e8e519ff', '#eae519ff', '#ebe51aff', '#ece51aff', '#ede51bff', '#efe51bff', '#f0e51cff', '#f1e51dff', '#f3e61dff', '#f4e61eff', '#f5e61eff', '#f6e61fff', '#f7e620ff', '#f8e621ff', '#fae722ff', '#fbe723ff', '#fce724ff', '#fde725ff']);
+    
+
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.x = d3.scale.linear()
+              .domain([5.542, 27.809000000000005])
+              .range([0, 450 - 50]);
+
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.legend = L.control({position: 'topright'});
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.legend.addTo(map_2e177425a657aae4976f4586614c9afb);
+
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.xAxis = d3.svg.axis()
+        .scale(color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([5.542, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 7.812360784313726, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 10.082721568627452, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 12.353082352941177, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 14.623443137254904, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16.89380392156863, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 19.164164705882357, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 21.43452549019608, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 23.70488627450981, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 25.975247058823534, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
+
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.g = color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.g.selectAll("rect")
+        .data(color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.x(color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.color.domain()[i - 1]) : color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.x.range()[0],
+            x1: i < color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.color.domain().length ? color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.x(color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.color.domain()[i]) : color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.g.call(color_map_c47bc3b95bfaa2cacdf5564d59e6b7d5.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text("Capacity in Million m^3/day");
+</script>
+</html>

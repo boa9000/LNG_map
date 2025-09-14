@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_02304f302fef52d9359397052bfb1b21 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_02304f302fef52d9359397052bfb1b21" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_02304f302fef52d9359397052bfb1b21 = L.map(
+                "map_02304f302fef52d9359397052bfb1b21",
+                {
+                    center: [49.7192255, 14.956610000000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_02304f302fef52d9359397052bfb1b21);
+
+            
+
+        
+    
+            var tile_layer_0cb72a15b1e1098c9a6ad3fc13d659a0 = L.tileLayer(
+                "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0cb72a15b1e1098c9a6ad3fc13d659a0.addTo(map_02304f302fef52d9359397052bfb1b21);
+        
+    
+        function geo_json_3d979717b2402168fcb598c31aab8eb0_styler(feature) {
+            switch(feature.id) {
+                case "255": case "495": case "496": case "497": case "498": case "821": case "1024": case "1025": case "1026": case "1078": case "1191": case "1217": case "1218": case "1219": case "1286": case "1461": case "1462": case "1746": case "1747": case "1748": case "1749": case "1750": case "1751": case "2456": case "3321": case "3389": case "3391": case "3569": case "3660": case "3870": case "4041": case "4218": case "4234": case "5030": case "5195": case "5246": case "5257": case "5280": case "5944": case "5948": case "5949": case "5966": 
+                    return {"color": "#3e4a89", "fillColor": "#3e4a89", "fillOpacity": 0.5, "weight": 3};
+                case "1438": 
+                    return {"color": "#4cc26c", "fillColor": "#4cc26c", "fillOpacity": 0.5, "weight": 3};
+                case "4389": case "4393": case "4744": case "4746": case "4747": case "4748": case "5029": 
+                    return {"color": "#fde725", "fillColor": "#fde725", "fillOpacity": 0.5, "weight": 3};
+                case "4432": 
+                    return {"color": "#2fb47c", "fillColor": "#2fb47c", "fillOpacity": 0.5, "weight": 3};
+                case "4439": 
+                    return {"color": "#70cf57", "fillColor": "#70cf57", "fillOpacity": 0.5, "weight": 3};
+                case "5189": case "5906": 
+                    return {"color": "#440154", "fillColor": "#440154", "fillOpacity": 0.5, "weight": 3};
+                case "5214": case "5776": case "6160": 
+                    return {"color": "#3fbc73", "fillColor": "#3fbc73", "fillOpacity": 0.5, "weight": 3};
+                case "6022": case "6300": 
+                    return {"color": "#3dbc74", "fillColor": "#3dbc74", "fillOpacity": 0.5, "weight": 3};
+                default:
+                    return {"color": "#481467", "fillColor": "#481467", "fillOpacity": 0.5, "weight": 3};
+            }
+        }
+        function geo_json_3d979717b2402168fcb598c31aab8eb0_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_3d979717b2402168fcb598c31aab8eb0_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 2,
+};
+            
+            let style = geo_json_3d979717b2402168fcb598c31aab8eb0_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_3d979717b2402168fcb598c31aab8eb0_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_3d979717b2402168fcb598c31aab8eb0.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_3d979717b2402168fcb598c31aab8eb0_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_3d979717b2402168fcb598c31aab8eb0 = L.geoJson(null, {
+                onEachFeature: geo_json_3d979717b2402168fcb598c31aab8eb0_onEachFeature,
+            
+                style: geo_json_3d979717b2402168fcb598c31aab8eb0_styler,
+                pointToLayer: geo_json_3d979717b2402168fcb598c31aab8eb0_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_3d979717b2402168fcb598c31aab8eb0_add (data) {
+            geo_json_3d979717b2402168fcb598c31aab8eb0
+                .addData(data);
+        }
+            geo_json_3d979717b2402168fcb598c31aab8eb0_add({"bbox": [11.165275, 48.50354, 18.747945, 50.934911], "features": [{"bbox": [16.097175, 48.94049, 16.55642, 49.193155], "geometry": {"coordinates": [[16.55642, 48.94049], [16.097175, 49.193155]], "type": "LineString"}, "id": "255", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_4994_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.6309, 49.15411, 14.73546, 49.54825], "geometry": {"coordinates": [[14.73546, 49.54825], [14.6309, 49.15411]], "type": "LineString"}, "id": "495", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5123_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.709905, 49.54825, 14.73546, 50.119505], "geometry": {"coordinates": [[14.709905, 50.119505], [14.73546, 49.54825]], "type": "LineString"}, "id": "496", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5774_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.66287, 50.119505, 14.709905, 50.22666], "geometry": {"coordinates": [[14.66287, 50.22666], [14.709905, 50.119505]], "type": "LineString"}, "id": "497", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "ST_3448_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.37469, 50.22666, 14.66287, 50.32082], "geometry": {"coordinates": [[14.37469, 50.32082], [14.66287, 50.22666]], "type": "LineString"}, "id": "498", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_350_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [16.55642, 48.91482, 17.14068, 48.94049], "geometry": {"coordinates": [[16.55642, 48.94049], [17.14068, 48.91482]], "type": "LineString"}, "id": "819", "properties": {"Capacity in Million m^3/day": 8.41, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "PLS_6009_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [17.14068, 48.91482, 17.62438, 49.3307], "geometry": {"coordinates": [[17.14068, 48.91482], [17.62438, 49.3307]], "type": "LineString"}, "id": "820", "properties": {"Capacity in Million m^3/day": 8.41, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "PLS_5134_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [17.298313, 49.3307, 17.62438, 49.401112], "geometry": {"coordinates": [[17.62438, 49.3307], [17.298313, 49.401112]], "type": "LineString"}, "id": "821", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "ST_7078_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [15.93103, 48.96738, 16.30161, 48.98078], "geometry": {"coordinates": [[16.30161, 48.96738], [15.93103, 48.98078]], "type": "LineString"}, "id": "1024", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_346_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.6309, 48.98078, 15.93103, 49.15411], "geometry": {"coordinates": [[15.93103, 48.98078], [14.6309, 49.15411]], "type": "LineString"}, "id": "1025", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_346_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [16.30161, 48.94049, 16.55642, 48.96738], "geometry": {"coordinates": [[16.30161, 48.96738], [16.55642, 48.94049]], "type": "LineString"}, "id": "1026", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_534_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [18.18704, 49.65937, 18.46193, 49.6717], "geometry": {"coordinates": [[18.46193, 49.6717], [18.18704, 49.65937]], "type": "LineString"}, "id": "1078", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_6304_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.52173, 50.49941, 13.8079, 50.63739], "geometry": {"coordinates": [[13.8079, 50.49941], [13.52173, 50.63739]], "type": "LineString"}, "id": "1190", "properties": {"Capacity in Million m^3/day": 8.358, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "ST_7271_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.8079, 50.32082, 14.37469, 50.49941], "geometry": {"coordinates": [[13.8079, 50.49941], [14.37469, 50.32082]], "type": "LineString"}, "id": "1191", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_349_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [15.7003, 49.193155, 16.097175, 49.43748], "geometry": {"coordinates": [[16.097175, 49.193155], [15.7003, 49.43748]], "type": "LineString"}, "id": "1217", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_4995_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [15.60191, 49.43748, 15.7003, 49.71442], "geometry": {"coordinates": [[15.7003, 49.43748], [15.60191, 49.71442]], "type": "LineString"}, "id": "1218", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_4996_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.709905, 49.71442, 15.60191, 50.119505], "geometry": {"coordinates": [[14.709905, 50.119505], [15.60191, 49.71442]], "type": "LineString"}, "id": "1219", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5357_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [17.62438, 49.3307, 18.18704, 49.65937], "geometry": {"coordinates": [[17.62438, 49.3307], [18.18704, 49.65937]], "type": "LineString"}, "id": "1286", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5135_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.94595, 49.760375, 13.8079, 50.49941], "geometry": {"coordinates": [[12.94595, 49.760375], [13.8079, 50.49941]], "type": "LineString"}, "id": "1438", "properties": {"Capacity in Million m^3/day": 83.562, "Country": "Czechia", "__folium_color": "#4cc26c", "diameter_mm": 1400.0, "name": "PLL_348_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.26736, 50.32082, 14.37469, 50.49631], "geometry": {"coordinates": [[14.37469, 50.32082], [14.26736, 50.49631]], "type": "LineString"}, "id": "1461", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_4968_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.37469, 50.119505, 14.709905, 50.32082], "geometry": {"coordinates": [[14.37469, 50.32082], [14.709905, 50.119505]], "type": "LineString"}, "id": "1462", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_4992_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.94595, 49.15411, 14.6309, 49.760375], "geometry": {"coordinates": [[14.6309, 49.15411], [12.94595, 49.760375]], "type": "LineString"}, "id": "1746", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_347_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.66287, 50.04827, 14.89987, 50.22666], "geometry": {"coordinates": [[14.66287, 50.22666], [14.89987, 50.04827]], "type": "LineString"}, "id": "1747", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_351_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.89987, 49.43748, 15.7003, 50.04827], "geometry": {"coordinates": [[14.89987, 50.04827], [15.7003, 49.43748]], "type": "LineString"}, "id": "1748", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_351_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [15.7003, 49.29526, 15.97552, 49.43748], "geometry": {"coordinates": [[15.7003, 49.43748], [15.97552, 49.29526]], "type": "LineString"}, "id": "1749", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_352_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [15.97552, 49.193155, 16.097175, 49.29526], "geometry": {"coordinates": [[15.97552, 49.29526], [16.097175, 49.193155]], "type": "LineString"}, "id": "1750", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_352_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [16.097175, 48.96738, 16.30161, 49.193155], "geometry": {"coordinates": [[16.097175, 49.193155], [16.30161, 48.96738]], "type": "LineString"}, "id": "1751", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLL_353_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.94595, 49.760375, 14.37469, 50.32082], "geometry": {"coordinates": [[12.94595, 49.760375], [14.37469, 50.32082]], "type": "LineString"}, "id": "2456", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLM_2023_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [16.55642, 48.94049, 16.59273, 49.0485], "geometry": {"coordinates": [[16.55642, 48.94049], [16.59273, 49.0485]], "type": "LineString"}, "id": "3321", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_4997_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [17.29235, 50.38984, 17.47204, 50.64922], "geometry": {"coordinates": [[17.29235, 50.38984], [17.47204, 50.64922]], "type": "LineString"}, "id": "3389", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5133_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [16.50318, 48.84243, 16.55642, 48.94049], "geometry": {"coordinates": [[16.50318, 48.84243], [16.55642, 48.94049]], "type": "LineString"}, "id": "3391", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5138_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.048542, 49.54825, 14.73546, 49.657311], "geometry": {"coordinates": [[14.73546, 49.54825], [14.048542, 49.657311]], "type": "LineString"}, "id": "3569", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5488_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [14.31423, 50.04997, 14.37469, 50.32082], "geometry": {"coordinates": [[14.31423, 50.04997], [14.37469, 50.32082]], "type": "LineString"}, "id": "3660", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5655_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [15.60191, 49.71442, 15.92101, 49.94177], "geometry": {"coordinates": [[15.60191, 49.71442], [15.92101, 49.94177]], "type": "LineString"}, "id": "3870", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_6091_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [18.18704, 49.65937, 18.21796, 49.82965], "geometry": {"coordinates": [[18.18704, 49.65937], [18.21796, 49.82965]], "type": "LineString"}, "id": "4041", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_6430_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [16.50318, 48.84243, 16.55642, 48.94049], "geometry": {"coordinates": [[16.55642, 48.94049], [16.50318, 48.84243]], "type": "LineString"}, "id": "4218", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "ST_7011_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [18.46193, 49.58023, 18.55723, 49.6717], "geometry": {"coordinates": [[18.46193, 49.6717], [18.55723, 49.58023]], "type": "LineString"}, "id": "4234", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "ST_7063_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.648857, 13.386092, 50.748934], "geometry": {"coordinates": [[13.386092, 50.748934], [13.384906, 50.648857]], "type": "LineString"}, "id": "4389", "properties": {"Capacity in Million m^3/day": 115.407, "Country": "Czechia", "__folium_color": "#fde725", "diameter_mm": 1400.0, "name": "LKD_PS_121_Seg_0_Seg_9"}, "type": "Feature"}, {"bbox": [12.612611, 50.648857, 13.384906, 50.781515], "geometry": {"coordinates": [[13.384906, 50.648857], [12.612611, 50.781515]], "type": "LineString"}, "id": "4393", "properties": {"Capacity in Million m^3/day": 115.407, "Country": "Czechia", "__folium_color": "#fde725", "diameter_mm": 800.0, "name": "LKD_PS_126_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.135993, 49.554659, 12.501059, 49.681546], "geometry": {"coordinates": [[12.501059, 49.681546], [12.135993, 49.554659]], "type": "LineString"}, "id": "4432", "properties": {"Capacity in Million m^3/day": 76.084, "Country": "Czechia", "__folium_color": "#2fb47c", "diameter_mm": 1100.0, "name": "LKD_PS_162_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [11.165275, 49.371161, 12.501059, 49.681546], "geometry": {"coordinates": [[12.501059, 49.681546], [11.165275, 49.371161]], "type": "LineString"}, "id": "4439", "properties": {"Capacity in Million m^3/day": 90.789, "Country": "Czechia", "__folium_color": "#70cf57", "diameter_mm": 1200.0, "name": "LKD_PS_168_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.648857, 13.483421, 50.928586], "geometry": {"coordinates": [[13.483421, 50.928586], [13.384906, 50.648857]], "type": "LineString"}, "id": "4744", "properties": {"Capacity in Million m^3/day": 115.407, "Country": "Czechia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "LKD_PS_577_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.648857, 13.422124, 50.797118], "geometry": {"coordinates": [[13.422124, 50.797118], [13.384906, 50.648857]], "type": "LineString"}, "id": "4746", "properties": {"Capacity in Million m^3/day": 115.407, "Country": "Czechia", "__folium_color": "#fde725", "diameter_mm": 600.0, "name": "LKD_PS_579_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.648857, 13.422124, 50.797118], "geometry": {"coordinates": [[13.422124, 50.797118], [13.384906, 50.648857]], "type": "LineString"}, "id": "4747", "properties": {"Capacity in Million m^3/day": 115.407, "Country": "Czechia", "__folium_color": "#fde725", "diameter_mm": 600.0, "name": "LKD_PS_580_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.011443, 50.648857, 13.384906, 50.934911], "geometry": {"coordinates": [[13.384906, 50.648857], [13.011443, 50.934911]], "type": "LineString"}, "id": "4748", "properties": {"Capacity in Million m^3/day": 115.407, "Country": "Czechia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "LKD_PS_589_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.539921, 49.661826, 13.384906, 50.648857], "geometry": {"coordinates": [[13.384906, 50.648857], [12.539921, 49.661826]], "type": "LineString"}, "id": "5029", "properties": {"Capacity in Million m^3/day": 115.407, "Country": "Czechia", "__folium_color": "#fde725", "diameter_mm": 900.0, "name": "LKD_PS_1167_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.501059, 49.661826, 12.539921, 49.681546], "geometry": {"coordinates": [[12.539921, 49.661826], [12.501059, 49.681546]], "type": "LineString"}, "id": "5030", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "LKD_PS_1167_Seg_0_Seg_5"}, "type": "Feature"}, {"bbox": [18.531823, 49.714948, 18.55374, 49.76515], "geometry": {"coordinates": [[18.55374, 49.76515], [18.531823, 49.714948]], "type": "LineString"}, "id": "5189", "properties": {"Capacity in Million m^3/day": 2.463, "Country": "Czechia", "__folium_color": "#440154", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_84"}, "type": "Feature"}, {"bbox": [16.50318, 48.84243, 16.58535, 48.85212], "geometry": {"coordinates": [[16.50318, 48.84243], [16.58535, 48.85212]], "type": "LineString"}, "id": "5195", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_91"}, "type": "Feature"}, {"bbox": [16.936667, 48.77895, 17.04115, 48.780688], "geometry": {"coordinates": [[17.04115, 48.77895], [16.936667, 48.780688]], "type": "LineString"}, "id": "5214", "properties": {"Capacity in Million m^3/day": 80.383, "Country": "Czechia", "__folium_color": "#3fbc73", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_116"}, "type": "Feature"}, {"bbox": [17.028471, 48.871374, 17.14068, 48.91482], "geometry": {"coordinates": [[17.14068, 48.91482], [17.028471, 48.871374]], "type": "LineString"}, "id": "5241", "properties": {"Capacity in Million m^3/day": 8.41, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_145"}, "type": "Feature"}, {"bbox": [18.091711, 49.593694, 18.18704, 49.65937], "geometry": {"coordinates": [[18.18704, 49.65937], [18.091711, 49.593694]], "type": "LineString"}, "id": "5246", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_154"}, "type": "Feature"}, {"bbox": [16.86976, 48.93946, 16.86976, 48.93946], "geometry": {"coordinates": [[16.86976, 48.93946], [16.86976, 48.93946]], "type": "LineString"}, "id": "5257", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_172"}, "type": "Feature"}, {"bbox": [15.97552, 49.29526, 16.215328, 49.495061], "geometry": {"coordinates": [[15.97552, 49.29526], [16.215328, 49.495061]], "type": "LineString"}, "id": "5280", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_201"}, "type": "Feature"}, {"bbox": [17.04115, 48.50354, 17.12774, 48.77895], "geometry": {"coordinates": [[17.04115, 48.77895], [17.12774, 48.50354]], "type": "LineString"}, "id": "5776", "properties": {"Capacity in Million m^3/day": 80.383, "Country": "Czechia", "__folium_color": "#3fbc73", "diameter_mm": 900.0, "name": "PLL_535_Seg_0_Seg_2_Seg_0"}, "type": "Feature"}, {"bbox": [18.55374, 49.76515, 18.747945, 49.805815], "geometry": {"coordinates": [[18.55374, 49.76515], [18.747945, 49.805815]], "type": "LineString"}, "id": "5906", "properties": {"Capacity in Million m^3/day": 2.463, "Country": "Czechia", "__folium_color": "#440154", "diameter_mm": 900.0, "name": "PLM_2041_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [17.14068, 48.5361, 17.30856, 48.91482], "geometry": {"coordinates": [[17.30856, 48.5361], [17.14068, 48.91482]], "type": "LineString"}, "id": "5933", "properties": {"Capacity in Million m^3/day": 8.41, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "PLS_4442_Seg_0_Seg_0_Seg_2"}, "type": "Feature"}, {"bbox": [16.09681, 50.45106, 16.31449, 50.45315], "geometry": {"coordinates": [[16.31449, 50.45106], [16.09681, 50.45315]], "type": "LineString"}, "id": "5944", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_4856_Seg_0_Seg_5_Seg_0"}, "type": "Feature"}, {"bbox": [17.19356, 50.30877, 17.29235, 50.38984], "geometry": {"coordinates": [[17.19356, 50.30877], [17.29235, 50.38984]], "type": "LineString"}, "id": "5948", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5132_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [17.29235, 50.2752, 17.72252, 50.38984], "geometry": {"coordinates": [[17.72252, 50.2752], [17.29235, 50.38984]], "type": "LineString"}, "id": "5949", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_5158_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [18.46193, 49.6717, 18.747945, 49.805815], "geometry": {"coordinates": [[18.747945, 49.805815], [18.46193, 49.6717]], "type": "LineString"}, "id": "5966", "properties": {"Capacity in Million m^3/day": 27.809, "Country": "Czechia", "__folium_color": "#3e4a89", "diameter_mm": 900.0, "name": "PLS_6303_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.63739, 13.52173, 50.648857], "geometry": {"coordinates": [[13.52173, 50.63739], [13.384906, 50.648857]], "type": "LineString"}, "id": "5999", "properties": {"Capacity in Million m^3/day": 8.358, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "LKD_PS_584_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.63739, 13.52173, 50.648857], "geometry": {"coordinates": [[13.52173, 50.63739], [13.384906, 50.648857]], "type": "LineString"}, "id": "6000", "properties": {"Capacity in Million m^3/day": 8.358, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 600.0, "name": "LKD_PS_585_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.63739, 13.52173, 50.648857], "geometry": {"coordinates": [[13.52173, 50.63739], [13.384906, 50.648857]], "type": "LineString"}, "id": "6001", "properties": {"Capacity in Million m^3/day": 8.358, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "LKD_PS_587_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.384906, 50.63739, 13.52173, 50.648857], "geometry": {"coordinates": [[13.384906, 50.648857], [13.52173, 50.63739]], "type": "LineString"}, "id": "6002", "properties": {"Capacity in Million m^3/day": 8.358, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 900.0, "name": "LKD_PS_588_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [13.422124, 50.63739, 13.52173, 50.797118], "geometry": {"coordinates": [[13.52173, 50.63739], [13.422124, 50.797118]], "type": "LineString"}, "id": "6013", "properties": {"Capacity in Million m^3/day": 8.358, "Country": "Czechia", "__folium_color": "#481467", "diameter_mm": 800.0, "name": "PLS_5658_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.51965, 49.63553, 12.94595, 49.760375], "geometry": {"coordinates": [[12.51965, 49.63553], [12.94595, 49.760375]], "type": "LineString"}, "id": "6022", "properties": {"Capacity in Million m^3/day": 79.785, "Country": "Czechia", "__folium_color": "#3dbc74", "diameter_mm": 1200.0, "name": "PLM_2022_Seg_0_Seg_1_Seg_1"}, "type": "Feature"}, {"bbox": [16.55642, 48.77895, 17.04115, 48.94049], "geometry": {"coordinates": [[16.55642, 48.94049], [17.04115, 48.77895]], "type": "LineString"}, "id": "6160", "properties": {"Capacity in Million m^3/day": 80.383, "Country": "Czechia", "__folium_color": "#3fbc73", "diameter_mm": 900.0, "name": "PLL_535_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [12.32804, 49.63553, 12.51965, 49.69749], "geometry": {"coordinates": [[12.32804, 49.69749], [12.51965, 49.63553]], "type": "LineString"}, "id": "6300", "properties": {"Capacity in Million m^3/day": 79.785, "Country": "Czechia", "__folium_color": "#3dbc74", "diameter_mm": 1200.0, "name": "PLM_2022_Seg_0_Seg_1_Seg_0"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_3d979717b2402168fcb598c31aab8eb0.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["diameter_mm", "Capacity in Million m^3/day"];
+    let aliases = ["diameter_mm", "Capacity in Million m^3/day"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_3d979717b2402168fcb598c31aab8eb0.addTo(map_02304f302fef52d9359397052bfb1b21);
+        
+    
+    var color_map_feee4986452ed4fbc18fd9f0c01f3962 = {};
+
+    
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.color = d3.scale.threshold()
+              .domain([2.463, 2.6893406813627254, 2.9156813627254508, 3.1420220440881765, 3.368362725450902, 3.594703406813627, 3.821044088176353, 4.047384769539079, 4.273725450901804, 4.500066132264529, 4.726406813627255, 4.95274749498998, 5.179088176352705, 5.405428857715431, 5.631769539078157, 5.8581102204408815, 6.084450901803607, 6.310791583166333, 6.537132264529058, 6.763472945891784, 6.9898136272545095, 7.216154308617234, 7.44249498997996, 7.668835671342685, 7.895176352705411, 8.121517034068136, 8.347857715430862, 8.574198396793587, 8.800539078156312, 9.026879759519039, 9.253220440881764, 9.47956112224449, 9.705901803607215, 9.93224248496994, 10.158583166332665, 10.38492384769539, 10.611264529058115, 10.83760521042084, 11.063945891783568, 11.290286573146293, 11.516627254509018, 11.742967935871743, 11.969308617234468, 12.195649298597196, 12.421989979959921, 12.648330661322646, 12.874671342685371, 13.101012024048096, 13.32735270541082, 13.55369338677355, 13.78003406813627, 14.006374749498999, 14.232715430861724, 14.459056112224449, 14.685396793587177, 14.911737474949899, 15.138078156312627, 15.364418837675352, 15.590759519038077, 15.817100200400802, 16.043440881763527, 16.26978156312625, 16.49612224448898, 16.7224629258517, 16.94880360721443, 17.175144288577155, 17.40148496993988, 17.627825651302608, 17.85416633266533, 18.080507014028058, 18.306847695390783, 18.533188376753507, 18.759529058116232, 18.98586973947896, 19.212210420841682, 19.43855110220441, 19.664891783567136, 19.89123246492986, 20.117573146292585, 20.343913827655314, 20.57025450901804, 20.796595190380764, 21.02293587174349, 21.249276553106213, 21.475617234468938, 21.701957915831663, 21.92829859719439, 22.154639278557116, 22.38097995991984, 22.607320641282566, 22.833661322645295, 23.06000200400802, 23.28634268537074, 23.512683366733466, 23.739024048096194, 23.96536472945892, 24.191705410821644, 24.418046092184372, 24.644386773547097, 24.870727454909822, 25.097068136272544, 25.323408817635272, 25.549749498997997, 25.776090180360722, 26.002430861723447, 26.228771543086175, 26.4551122244489, 26.681452905811625, 26.907793587174353, 27.134134268537075, 27.3604749498998, 27.586815631262525, 27.813156312625253, 28.039496993987978, 28.265837675350703, 28.492178356713428, 28.718519038076156, 28.94485971943888, 29.171200400801602, 29.39754108216433, 29.623881763527056, 29.85022244488978, 30.076563126252505, 30.302903807615234, 30.52924448897796, 30.755585170340684, 30.981925851703405, 31.208266533066134, 31.43460721442886, 31.660947895791583, 31.88728857715431, 32.11362925851704, 32.33996993987976, 32.566310621242486, 32.792651302605215, 33.018991983967936, 33.24533266533066, 33.471673346693386, 33.698014028056114, 33.924354709418836, 34.150695390781564, 34.37703607214429, 34.603376753507014, 34.82971743486974, 35.056058116232464, 35.28239879759519, 35.50873947895792, 35.73508016032064, 35.96142084168336, 36.18776152304609, 36.41410220440882, 36.64044288577155, 36.86678356713427, 37.093124248497, 37.31946492985972, 37.54580561122245, 37.77214629258517, 37.99848697394789, 38.22482765531063, 38.45116833667335, 38.677509018036076, 38.9038496993988, 39.130190380761526, 39.35653106212425, 39.582871743486976, 39.809212424849704, 40.035553106212426, 40.261893787575154, 40.488234468937875, 40.714575150300604, 40.940915831663325, 41.167256513026054, 41.39359719438878, 41.61993787575151, 41.84627855711423, 42.07261923847695, 42.29895991983968, 42.5253006012024, 42.75164128256513, 42.97798196392785, 43.20432264529059, 43.43066332665331, 43.65700400801604, 43.88334468937876, 44.10968537074148, 44.33602605210421, 44.56236673346693, 44.788707414829666, 45.01504809619239, 45.241388777555116, 45.46772945891784, 45.694070140280566, 45.92041082164329, 46.14675150300601, 46.373092184368744, 46.599432865731465, 46.825773547094194, 47.052114228456915, 47.278454909819644, 47.504795591182365, 47.731136272545086, 47.957476953907815, 48.18381763527054, 48.41015831663327, 48.63649899799599, 48.86283967935872, 49.08918036072144, 49.31552104208417, 49.54186172344689, 49.76820240480962, 49.99454308617235, 50.22088376753507, 50.4472244488978, 50.67356513026052, 50.89990581162325, 51.12624649298597, 51.352587174348706, 51.57892785571143, 51.80526853707415, 52.03160921843688, 52.2579498997996, 52.48429058116233, 52.71063126252505, 52.93697194388778, 53.163312625250505, 53.38965330661323, 53.615993987975955, 53.842334669338676, 54.068675350701405, 54.295016032064126, 54.521356713426854, 54.74769739478958, 54.97403807615231, 55.20037875751503, 55.42671943887776, 55.65306012024048, 55.879400801603204, 56.10574148296593, 56.33208216432866, 56.55842284569139, 56.78476352705411, 57.01110420841684, 57.23744488977956, 57.46378557114229, 57.69012625250501, 57.91646693386773, 58.14280761523047, 58.36914829659319, 58.59548897795592, 58.82182965931864, 59.04817034068137, 59.27451102204409, 59.50085170340681, 59.727192384769545, 59.953533066132266, 60.179873747494995, 60.406214428857716, 60.632555110220444, 60.858895791583166, 61.085236472945894, 61.31157715430862, 61.537917835671344, 61.76425851703407, 61.990599198396794, 62.21693987975952, 62.44328056112224, 62.66962124248497, 62.8959619238477, 63.12230260521043, 63.34864328657315, 63.57498396793587, 63.8013246492986, 64.02766533066132, 64.25400601202405, 64.48034669338676, 64.7066873747495, 64.93302805611222, 65.15936873747495, 65.38570941883768, 65.61205010020039, 65.83839078156312, 66.06473146292585, 66.29107214428858, 66.5174128256513, 66.74375350701402, 66.97009418837675, 67.19643486973948, 67.42277555110219, 67.64911623246492, 67.87545691382765, 68.10179759519038, 68.32813827655309, 68.55447895791583, 68.78081963927856, 69.00716032064128, 69.233501002004, 69.45984168336672, 69.68618236472946, 69.91252304609218, 70.1388637274549, 70.36520440881763, 70.59154509018036, 70.81788577154309, 71.0442264529058, 71.27056713426853, 71.49690781563125, 71.72324849699399, 71.9495891783567, 72.17592985971943, 72.40227054108216, 72.62861122244489, 72.85495190380762, 73.08129258517033, 73.30763326653306, 73.53397394789577, 73.76031462925852, 73.98665531062125, 74.21299599198396, 74.43933667334669, 74.66567735470942, 74.89201803607214, 75.11835871743486, 75.34469939879759, 75.57104008016032, 75.79738076152304, 76.02372144288577, 76.25006212424849, 76.47640280561122, 76.70274348697394, 76.92908416833667, 77.1554248496994, 77.38176553106211, 77.60810621242484, 77.83444689378757, 78.0607875751503, 78.28712825651301, 78.51346893787574, 78.73980961923849, 78.9661503006012, 79.19249098196393, 79.41883166332664, 79.64517234468937, 79.8715130260521, 80.09785370741483, 80.32419438877756, 80.55053507014027, 80.77687575150301, 81.00321643286573, 81.22955711422846, 81.45589779559117, 81.6822384769539, 81.90857915831663, 82.13491983967936, 82.36126052104208, 82.5876012024048, 82.81394188376754, 83.04028256513025, 83.26662324649298, 83.4929639278557, 83.71930460921843, 83.94564529058117, 84.17198597194388, 84.39832665330661, 84.62466733466933, 84.85100801603207, 85.07734869739478, 85.30368937875751, 85.53003006012024, 85.75637074148295, 85.9827114228457, 86.20905210420841, 86.43539278557114, 86.66173346693385, 86.8880741482966, 87.11441482965932, 87.34075551102204, 87.56709619238477, 87.79343687374748, 88.01977755511022, 88.24611823647294, 88.47245891783567, 88.6987995991984, 88.92514028056112, 89.15148096192385, 89.37782164328657, 89.6041623246493, 89.83050300601201, 90.05684368737475, 90.28318436873748, 90.5095250501002, 90.73586573146292, 90.96220641282564, 91.18854709418838, 91.4148877755511, 91.64122845691382, 91.86756913827655, 92.09390981963928, 92.32025050100201, 92.54659118236472, 92.77293186372745, 92.99927254509016, 93.22561322645291, 93.45195390781562, 93.67829458917835, 93.90463527054108, 94.1309759519038, 94.35731663326654, 94.58365731462925, 94.80999799599198, 95.03633867735469, 95.26267935871743, 95.48902004008016, 95.71536072144288, 95.9417014028056, 96.16804208416833, 96.39438276553106, 96.62072344689378, 96.8470641282565, 97.07340480961923, 97.29974549098196, 97.52608617234469, 97.7524268537074, 97.97876753507013, 98.20510821643286, 98.43144889779559, 98.65778957915832, 98.88413026052103, 99.11047094188376, 99.33681162324649, 99.56315230460922, 99.78949298597193, 100.01583366733466, 100.2421743486974, 100.46851503006012, 100.69485571142285, 100.92119639278556, 101.14753707414829, 101.37387775551102, 101.60021843687375, 101.82655911823647, 102.05289979959919, 102.27924048096193, 102.50558116232465, 102.73192184368737, 102.95826252505009, 103.18460320641282, 103.41094388777555, 103.63728456913827, 103.863625250501, 104.08996593186372, 104.31630661322646, 104.54264729458917, 104.7689879759519, 104.99532865731462, 105.22166933867734, 105.44801002004009, 105.6743507014028, 105.90069138276553, 106.12703206412824, 106.35337274549099, 106.5797134268537, 106.80605410821643, 107.03239478957916, 107.25873547094187, 107.48507615230461, 107.71141683366733, 107.93775751503006, 108.16409819639277, 108.39043887775551, 108.61677955911824, 108.84312024048096, 109.06946092184369, 109.2958016032064, 109.52214228456914, 109.74848296593186, 109.97482364729458, 110.20116432865731, 110.42750501002004, 110.65384569138277, 110.88018637274548, 111.10652705410821, 111.33286773547093, 111.55920841683367, 111.7855490981964, 112.01188977955911, 112.23823046092184, 112.46457114228457, 112.6909118236473, 112.91725250501001, 113.14359318637274, 113.36993386773545, 113.5962745490982, 113.82261523046093, 114.04895591182364, 114.27529659318637, 114.50163727454908, 114.72797795591183, 114.95431863727454, 115.18065931863727, 115.407])
+              .range(['#440154ff', '#440155ff', '#440256ff', '#440356ff', '#450457ff', '#450458ff', '#450559ff', '#450659ff', '#46075aff', '#46075bff', '#46085cff', '#46095cff', '#460a5dff', '#460a5eff', '#460b5eff', '#460c5fff', '#470d60ff', '#470d61ff', '#470e61ff', '#470f62ff', '#471063ff', '#471064ff', '#471164ff', '#471265ff', '#471365ff', '#481366ff', '#481467ff', '#481568ff', '#481668ff', '#481669ff', '#481769ff', '#48176aff', '#48186bff', '#48196cff', '#481a6cff', '#481a6dff', '#481b6dff', '#481c6eff', '#481c6eff', '#481d6fff', '#481d6fff', '#481f70ff', '#481f70ff', '#482071ff', '#482072ff', '#482173ff', '#482273ff', '#482374ff', '#482374ff', '#482475ff', '#482476ff', '#482576ff', '#482577ff', '#482677ff', '#482778ff', '#482878ff', '#482879ff', '#482979ff', '#47297aff', '#472a7aff', '#472b7aff', '#472c7aff', '#472c7bff', '#472d7bff', '#472d7cff', '#472e7cff', '#472e7dff', '#472f7dff', '#462f7eff', '#46307eff', '#46317eff', '#46327eff', '#46327fff', '#46337fff', '#463480ff', '#453480ff', '#453581ff', '#453581ff', '#453681ff', '#453781ff', '#453882ff', '#443882ff', '#443983ff', '#443983ff', '#443a83ff', '#443a83ff', '#443b84ff', '#433c84ff', '#433d84ff', '#433d85ff', '#433e85ff', '#423e85ff', '#423f85ff', '#423f86ff', '#424086ff', '#424086ff', '#424186ff', '#414187ff', '#414287ff', '#414387ff', '#414487ff', '#404488ff', '#404588ff', '#404588ff', '#404688ff', '#3f4688ff', '#3f4788ff', '#3f4789ff', '#3f4889ff', '#3e4889ff', '#3e4989ff', '#3e4a89ff', '#3e4a89ff', '#3e4b8aff', '#3d4c8aff', '#3d4d8aff', '#3d4d8aff', '#3d4e8aff', '#3c4e8aff', '#3c4f8aff', '#3c4f8aff', '#3c508bff', '#3b508bff', '#3b518bff', '#3b518bff', '#3b528bff', '#3a528bff', '#3a538bff', '#3a538bff', '#3a548cff', '#39548cff', '#39558cff', '#39558cff', '#39568cff', '#38578cff', '#38588cff', '#38588cff', '#38598cff', '#37598cff', '#375a8cff', '#375a8dff', '#375b8dff', '#365b8dff', '#365c8dff', '#365c8dff', '#365d8dff', '#355d8dff', '#355e8dff', '#355f8dff', '#355f8dff', '#34608dff', '#34608dff', '#34618dff', '#34618dff', '#33628dff', '#33628dff', '#33638dff', '#32638dff', '#32648eff', '#32648eff', '#32658eff', '#31658eff', '#31668eff', '#31668eff', '#31678eff', '#31678eff', '#31688eff', '#30688eff', '#30698eff', '#30698eff', '#306a8eff', '#2f6a8eff', '#2f6b8eff', '#2f6b8eff', '#2f6c8eff', '#2e6c8eff', '#2e6d8eff', '#2e6d8eff', '#2e6e8eff', '#2e6e8eff', '#2e6f8eff', '#2d6f8eff', '#2d708eff', '#2d708eff', '#2d718eff', '#2c718eff', '#2c718eff', '#2c728eff', '#2c728eff', '#2c738eff', '#2c738eff', '#2b748eff', '#2b748eff', '#2b758eff', '#2b758eff', '#2a768eff', '#2a768eff', '#2a778eff', '#2a778eff', '#2a788eff', '#29788eff', '#29798eff', '#29798eff', '#297a8eff', '#297a8eff', '#297b8eff', '#287b8eff', '#287c8eff', '#287c8eff', '#287d8eff', '#277d8eff', '#277e8eff', '#277e8eff', '#277f8eff', '#277f8eff', '#27808eff', '#26808eff', '#26818eff', '#26818eff', '#26828eff', '#26828eff', '#26828eff', '#25828eff', '#25838eff', '#25838eff', '#25848eff', '#25858eff', '#25858eff', '#24868eff', '#24868eff', '#24878eff', '#24878eff', '#23888eff', '#23888eff', '#23898eff', '#23898eff', '#238a8dff', '#238a8dff', '#228b8dff', '#228b8dff', '#228c8dff', '#228c8dff', '#228d8dff', '#218d8dff', '#218e8dff', '#218e8dff', '#218f8dff', '#218f8dff', '#21908dff', '#21908dff', '#21918cff', '#20918cff', '#20928cff', '#20928cff', '#20928cff', '#20928cff', '#20938cff', '#1f938cff', '#1f948cff', '#1f948cff', '#1f958bff', '#1f958bff', '#1f968bff', '#1f968bff', '#1f978bff', '#1f988bff', '#1f988bff', '#1f998bff', '#1f998aff', '#1f9a8aff', '#1f9a8aff', '#1e9b8aff', '#1e9b8aff', '#1e9c8aff', '#1e9c89ff', '#1e9d89ff', '#1e9d89ff', '#1e9e89ff', '#1f9e89ff', '#1f9f88ff', '#1f9f88ff', '#1fa088ff', '#1fa088ff', '#1fa188ff', '#1fa188ff', '#1fa187ff', '#1fa187ff', '#1fa287ff', '#1fa287ff', '#1fa386ff', '#20a386ff', '#20a486ff', '#20a486ff', '#20a585ff', '#21a585ff', '#21a685ff', '#21a685ff', '#21a785ff', '#22a785ff', '#22a884ff', '#22a884ff', '#22a983ff', '#23a983ff', '#23aa83ff', '#24ab83ff', '#25ab82ff', '#25ac82ff', '#25ac82ff', '#25ad82ff', '#26ad81ff', '#26ad81ff', '#27ad81ff', '#27ae81ff', '#28ae80ff', '#28af80ff', '#29af7fff', '#29b07fff', '#2ab07fff', '#2bb17eff', '#2cb17eff', '#2cb27dff', '#2db27dff', '#2db37cff', '#2eb37cff', '#2eb47cff', '#2fb47cff', '#30b57bff', '#31b57bff', '#31b67aff', '#32b67aff', '#33b679ff', '#34b679ff', '#34b779ff', '#35b779ff', '#36b878ff', '#37b878ff', '#37b977ff', '#38b977ff', '#39ba76ff', '#3aba76ff', '#3abb75ff', '#3bbb75ff', '#3cbc74ff', '#3dbc74ff', '#3ebc73ff', '#3fbd73ff', '#40bd72ff', '#40be72ff', '#41be71ff', '#42bf71ff', '#43bf70ff', '#45c070ff', '#46c06fff', '#47c16fff', '#48c16eff', '#49c16eff', '#4ac16dff', '#4bc26cff', '#4cc26cff', '#4dc36bff', '#4ec36bff', '#4fc46aff', '#50c46aff', '#51c569ff', '#52c569ff', '#53c568ff', '#54c568ff', '#55c667ff', '#56c667ff', '#57c766ff', '#58c765ff', '#59c864ff', '#5ac864ff', '#5bc863ff', '#5cc863ff', '#5dc962ff', '#5ec962ff', '#5fca61ff', '#60ca60ff', '#62cb5fff', '#63cb5fff', '#64cb5eff', '#65cc5dff', '#66cc5cff', '#67cd5cff', '#68cd5bff', '#6acd5bff', '#6bcd5aff', '#6cce59ff', '#6ece58ff', '#6fcf58ff', '#70cf57ff', '#71d057ff', '#72d056ff', '#74d055ff', '#75d054ff', '#76d153ff', '#77d153ff', '#78d152ff', '#7ad151ff', '#7bd250ff', '#7cd250ff', '#7dd34fff', '#7fd34eff', '#80d34dff', '#81d34dff', '#82d44cff', '#84d44bff', '#85d54aff', '#86d549ff', '#88d548ff', '#89d548ff', '#8ad647ff', '#8bd646ff', '#8dd645ff', '#8ed645ff', '#8fd744ff', '#90d743ff', '#92d742ff', '#93d741ff', '#94d840ff', '#96d83fff', '#97d83eff', '#99d93dff', '#9ad93cff', '#9bd93cff', '#9dd93bff', '#9eda3aff', '#9fda39ff', '#a1da38ff', '#a2da37ff', '#a3db36ff', '#a4db36ff', '#a6db35ff', '#a8db34ff', '#a9dc33ff', '#aadc32ff', '#abdc31ff', '#addc30ff', '#aedd2fff', '#b0dd2fff', '#b1dd2eff', '#b2dd2dff', '#b3de2cff', '#b5de2bff', '#b6de2aff', '#b8de29ff', '#b9de28ff', '#bade28ff', '#bcdf27ff', '#bddf26ff', '#bfdf25ff', '#c0df25ff', '#c1df24ff', '#c2df23ff', '#c4e022ff', '#c5e021ff', '#c7e020ff', '#c8e020ff', '#c9e11fff', '#cbe11eff', '#cce11dff', '#cee11dff', '#cfe11cff', '#d1e11bff', '#d2e21bff', '#d3e21aff', '#d4e21aff', '#d6e219ff', '#d7e219ff', '#d9e319ff', '#dae319ff', '#dbe318ff', '#dde318ff', '#dee318ff', '#dfe318ff', '#e0e418ff', '#e2e418ff', '#e3e418ff', '#e5e418ff', '#e6e419ff', '#e7e419ff', '#e8e519ff', '#eae519ff', '#ebe51aff', '#ece51aff', '#ede51bff', '#efe51bff', '#f0e51cff', '#f1e51dff', '#f3e61dff', '#f4e61eff', '#f5e61eff', '#f6e61fff', '#f7e620ff', '#f8e621ff', '#fae722ff', '#fbe723ff', '#fce724ff', '#fde725ff']);
+    
+
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.x = d3.scale.linear()
+              .domain([2.463, 115.407])
+              .range([0, 450 - 50]);
+
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.legend = L.control({position: 'topright'});
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.legend.addTo(map_02304f302fef52d9359397052bfb1b21);
+
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.xAxis = d3.svg.axis()
+        .scale(color_map_feee4986452ed4fbc18fd9f0c01f3962.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([2.463, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 13.97885882352941, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 25.494717647058824, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 37.010576470588234, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 48.52643529411765, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 60.04229411764707, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 71.55815294117646, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 83.07401176470589, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 94.58987058823529, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 106.1057294117647, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
+
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.g = color_map_feee4986452ed4fbc18fd9f0c01f3962.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.g.selectAll("rect")
+        .data(color_map_feee4986452ed4fbc18fd9f0c01f3962.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_feee4986452ed4fbc18fd9f0c01f3962.x(color_map_feee4986452ed4fbc18fd9f0c01f3962.color.domain()[i - 1]) : color_map_feee4986452ed4fbc18fd9f0c01f3962.x.range()[0],
+            x1: i < color_map_feee4986452ed4fbc18fd9f0c01f3962.color.domain().length ? color_map_feee4986452ed4fbc18fd9f0c01f3962.x(color_map_feee4986452ed4fbc18fd9f0c01f3962.color.domain()[i]) : color_map_feee4986452ed4fbc18fd9f0c01f3962.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_feee4986452ed4fbc18fd9f0c01f3962.g.call(color_map_feee4986452ed4fbc18fd9f0c01f3962.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text("Capacity in Million m^3/day");
+</script>
+</html>
