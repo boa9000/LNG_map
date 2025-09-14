@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3ce3eae8a46e0e3a9103b7f4298af377 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3ce3eae8a46e0e3a9103b7f4298af377" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3ce3eae8a46e0e3a9103b7f4298af377 = L.map(
+                "map_3ce3eae8a46e0e3a9103b7f4298af377",
+                {
+                    center: [46.8882195, 7.529300000000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_3ce3eae8a46e0e3a9103b7f4298af377);
+
+            
+
+        
+    
+            var tile_layer_49c25104ebd4f4beec498d8481b1392d = L.tileLayer(
+                "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_49c25104ebd4f4beec498d8481b1392d.addTo(map_3ce3eae8a46e0e3a9103b7f4298af377);
+        
+    
+        function geo_json_b4b00773fef231ee3783787c3aa61484_styler(feature) {
+            switch(feature.id) {
+                case "751": case "3546": case "5802": 
+                    return {"color": "#c2df23", "fillColor": "#c2df23", "fillOpacity": 0.5, "weight": 3};
+                case "794": case "1363": case "1364": case "1365": case "1816": case "3318": case "3435": case "3540": case "3694": case "3695": case "3710": case "3813": case "3868": case "3869": case "3896": case "3897": case "3898": case "3899": case "3900": case "3952": case "3970": case "3998": case "4022": case "4055": case "4056": case "5466": case "5477": case "6006": case "6031": case "6271": case "6291": 
+                    return {"color": "#26818e", "fillColor": "#26818e", "fillOpacity": 0.5, "weight": 3};
+                case "802": 
+                    return {"color": "#3bbb75", "fillColor": "#3bbb75", "fillOpacity": 0.5, "weight": 3};
+                case "803": case "1815": case "5809": case "5875": 
+                    return {"color": "#355e8d", "fillColor": "#355e8d", "fillOpacity": 0.5, "weight": 3};
+                case "4463": 
+                    return {"color": "#73d056", "fillColor": "#73d056", "fillOpacity": 0.5, "weight": 3};
+                case "4477": 
+                    return {"color": "#fde725", "fillColor": "#fde725", "fillOpacity": 0.5, "weight": 3};
+                case "5027": case "6005": case "6030": case "6035": case "6050": case "6172": case "6308": 
+                    return {"color": "#440154", "fillColor": "#440154", "fillOpacity": 0.5, "weight": 3};
+                case "5950": 
+                    return {"color": "#46085c", "fillColor": "#46085c", "fillOpacity": 0.5, "weight": 3};
+                case "6003": 
+                    return {"color": "#460b5e", "fillColor": "#460b5e", "fillOpacity": 0.5, "weight": 3};
+                case "6032": 
+                    return {"color": "#440256", "fillColor": "#440256", "fillOpacity": 0.5, "weight": 3};
+                default:
+                    return {"color": "#dae319", "fillColor": "#dae319", "fillOpacity": 0.5, "weight": 3};
+            }
+        }
+        function geo_json_b4b00773fef231ee3783787c3aa61484_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_b4b00773fef231ee3783787c3aa61484_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 2,
+};
+            
+            let style = geo_json_b4b00773fef231ee3783787c3aa61484_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_b4b00773fef231ee3783787c3aa61484_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_b4b00773fef231ee3783787c3aa61484.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_b4b00773fef231ee3783787c3aa61484_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_b4b00773fef231ee3783787c3aa61484 = L.geoJson(null, {
+                onEachFeature: geo_json_b4b00773fef231ee3783787c3aa61484_onEachFeature,
+            
+                style: geo_json_b4b00773fef231ee3783787c3aa61484_styler,
+                pointToLayer: geo_json_b4b00773fef231ee3783787c3aa61484_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_b4b00773fef231ee3783787c3aa61484_add (data) {
+            geo_json_b4b00773fef231ee3783787c3aa61484
+                .addData(data);
+        }
+            geo_json_b4b00773fef231ee3783787c3aa61484_add({"bbox": [5.29412, 45.926835, 9.76448, 47.849604], "features": [{"bbox": [7.85795, 46.48966, 8.30971, 47.37114], "geometry": {"coordinates": [[7.85795, 47.37114], [8.30971, 46.48966]], "type": "LineString"}, "id": "751", "properties": {"Capacity in Million m^3/day": 55.899809172620266, "Country": "Switzerland", "__folium_color": "#c2df23", "diameter_mm": 1200.0, "name": "PLL_506_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [5.29412, 46.31501, 6.26551, 46.3371], "geometry": {"coordinates": [[5.29412, 46.31501], [6.26551, 46.3371]], "type": "LineString"}, "id": "794", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLM_2100_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.600275, 47.37114, 7.85795, 47.43527], "geometry": {"coordinates": [[7.85795, 47.37114], [7.600275, 47.43527]], "type": "LineString"}, "id": "802", "properties": {"Capacity in Million m^3/day": 42.4657, "Country": "Switzerland", "__folium_color": "#3bbb75", "diameter_mm": 900.0, "name": "ST_1005_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [6.98279, 47.46597, 7.43854, 47.5502], "geometry": {"coordinates": [[7.43854, 47.46597], [6.98279, 47.5502]], "type": "LineString"}, "id": "803", "properties": {"Capacity in Million m^3/day": 19.618598434835253, "Country": "Switzerland", "__folium_color": "#355e8d", "diameter_mm": 900.0, "name": "PLM_2091_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.995595, 47.408115, 8.01583, 47.52373], "geometry": {"coordinates": [[8.01583, 47.52373], [7.995595, 47.408115]], "type": "LineString"}, "id": "845", "properties": {"Capacity in Million m^3/day": 57.926439451269, "Country": "Switzerland", "__folium_color": "#dae319", "diameter_mm": 1200.0, "name": "PLS_6280_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.584275, 47.47335, 9.00524, 47.503305], "geometry": {"coordinates": [[9.00524, 47.47335], [8.584275, 47.503305]], "type": "LineString"}, "id": "1363", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5298_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.30334, 47.43332, 8.584275, 47.503305], "geometry": {"coordinates": [[8.584275, 47.503305], [8.30334, 47.43332]], "type": "LineString"}, "id": "1364", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6279_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.995595, 47.408115, 8.30334, 47.43332], "geometry": {"coordinates": [[8.30334, 47.43332], [7.995595, 47.408115]], "type": "LineString"}, "id": "1365", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6414_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.43854, 47.46597, 7.43965, 47.67993], "geometry": {"coordinates": [[7.43965, 47.67993], [7.43854, 47.46597]], "type": "LineString"}, "id": "1815", "properties": {"Capacity in Million m^3/day": 19.618598434835253, "Country": "Switzerland", "__folium_color": "#355e8d", "diameter_mm": 900.0, "name": "PLL_503_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.600275, 47.37114, 7.85795, 47.43527], "geometry": {"coordinates": [[7.600275, 47.43527], [7.85795, 47.37114]], "type": "LineString"}, "id": "1816", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLL_505_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.584275, 47.26702, 8.70833, 47.503305], "geometry": {"coordinates": [[8.584275, 47.503305], [8.70833, 47.26702]], "type": "LineString"}, "id": "3318", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_4951_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [6.53896, 46.50458, 7.14579, 46.95455], "geometry": {"coordinates": [[7.14579, 46.95455], [6.53896, 46.50458]], "type": "LineString"}, "id": "3435", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5207_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.27803, 47.02401, 7.31793, 47.12726], "geometry": {"coordinates": [[7.27803, 47.12726], [7.31793, 47.02401]], "type": "LineString"}, "id": "3540", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5439_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [6.53896, 46.48966, 8.30971, 46.50458], "geometry": {"coordinates": [[8.30971, 46.48966], [6.53896, 46.50458]], "type": "LineString"}, "id": "3546", "properties": {"Capacity in Million m^3/day": 55.899809172620266, "Country": "Switzerland", "__folium_color": "#c2df23", "diameter_mm": 900.0, "name": "PLS_5446_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.21797, 47.05671, 8.30334, 47.43332], "geometry": {"coordinates": [[8.30334, 47.43332], [8.21797, 47.05671]], "type": "LineString"}, "id": "3694", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5747_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.92755, 47.05671, 8.21797, 47.27667], "geometry": {"coordinates": [[8.21797, 47.05671], [7.92755, 47.27667]], "type": "LineString"}, "id": "3695", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5747_Seg_0_Seg_2"}, "type": "Feature"}, {"bbox": [9.59059, 47.22211, 9.76448, 47.48454], "geometry": {"coordinates": [[9.76448, 47.22211], [9.59059, 47.48454]], "type": "LineString"}, "id": "3710", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5772_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.92755, 47.27667, 7.995595, 47.408115], "geometry": {"coordinates": [[7.995595, 47.408115], [7.92755, 47.27667]], "type": "LineString"}, "id": "3813", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5963_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [6.50169, 46.89566, 7.14579, 46.95455], "geometry": {"coordinates": [[7.14579, 46.95455], [6.50169, 46.89566]], "type": "LineString"}, "id": "3868", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6079_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.39312, 47.34316, 7.600275, 47.43527], "geometry": {"coordinates": [[7.39312, 47.34316], [7.600275, 47.43527]], "type": "LineString"}, "id": "3869", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6080_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.14579, 46.95455, 7.31793, 47.02401], "geometry": {"coordinates": [[7.14579, 46.95455], [7.31793, 47.02401]], "type": "LineString"}, "id": "3896", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6130_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.31793, 47.02401, 7.45879, 47.06594], "geometry": {"coordinates": [[7.31793, 47.02401], [7.45879, 47.06594]], "type": "LineString"}, "id": "3897", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6131_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.5164, 47.503305, 8.584275, 47.6114], "geometry": {"coordinates": [[8.5164, 47.6114], [8.584275, 47.503305]], "type": "LineString"}, "id": "3898", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6133_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.45879, 46.76461, 7.58854, 47.06594], "geometry": {"coordinates": [[7.58854, 46.76461], [7.45879, 47.06594]], "type": "LineString"}, "id": "3899", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6136_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.45879, 47.06594, 7.92755, 47.27667], "geometry": {"coordinates": [[7.92755, 47.27667], [7.45879, 47.06594]], "type": "LineString"}, "id": "3900", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6137_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.600275, 47.27667, 7.92755, 47.43527], "geometry": {"coordinates": [[7.600275, 47.43527], [7.92755, 47.27667]], "type": "LineString"}, "id": "3952", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6233_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [9.0011, 47.27977, 9.00524, 47.47335], "geometry": {"coordinates": [[9.00524, 47.47335], [9.0011, 47.27977]], "type": "LineString"}, "id": "3970", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6275_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [6.81475, 47.38116, 6.98279, 47.5502], "geometry": {"coordinates": [[6.98279, 47.5502], [6.81475, 47.38116]], "type": "LineString"}, "id": "3998", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6333_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.40804, 47.06594, 7.45879, 47.18311], "geometry": {"coordinates": [[7.45879, 47.06594], [7.40804, 47.18311]], "type": "LineString"}, "id": "4022", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6398_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.48347, 47.31155, 8.584275, 47.503305], "geometry": {"coordinates": [[8.584275, 47.503305], [8.48347, 47.31155]], "type": "LineString"}, "id": "4055", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6452_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.30334, 47.43332, 8.30334, 47.43332], "geometry": {"coordinates": [[8.30334, 47.43332], [8.30334, 47.43332]], "type": "LineString"}, "id": "4056", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_6453_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.637349, 47.616503, 7.827246, 47.849604], "geometry": {"coordinates": [[7.637349, 47.849604], [7.827246, 47.616503]], "type": "LineString"}, "id": "4463", "properties": {"Capacity in Million m^3/day": 48.80510625278217, "Country": "Switzerland", "__folium_color": "#73d056", "diameter_mm": 950.0, "name": "LKD_PS_197_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.637349, 47.616503, 7.827246, 47.849604], "geometry": {"coordinates": [[7.637349, 47.849604], [7.827246, 47.616503]], "type": "LineString"}, "id": "4477", "properties": {"Capacity in Million m^3/day": 61.37956396400001, "Country": "Switzerland", "__folium_color": "#fde725", "diameter_mm": 1000.0, "name": "LKD_PS_214_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.637349, 47.56344, 7.673591, 47.849604], "geometry": {"coordinates": [[7.637349, 47.849604], [7.673591, 47.56344]], "type": "LineString"}, "id": "5027", "properties": {"Capacity in Million m^3/day": 2.0, "Country": "Switzerland", "__folium_color": "#440154", "diameter_mm": 700.0, "name": "LKD_PS_1134_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.8072, 47.5708, 7.827246, 47.616503], "geometry": {"coordinates": [[7.827246, 47.616503], [7.8072, 47.5708]], "type": "LineString"}, "id": "5466", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_140"}, "type": "Feature"}, {"bbox": [8.228075, 47.431145, 8.30334, 47.43332], "geometry": {"coordinates": [[8.30334, 47.43332], [8.228075, 47.431145]], "type": "LineString"}, "id": "5477", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_154"}, "type": "Feature"}, {"bbox": [8.30971, 46.3579, 8.41674, 46.48966], "geometry": {"coordinates": [[8.30971, 46.48966], [8.41674, 46.3579]], "type": "LineString"}, "id": "5802", "properties": {"Capacity in Million m^3/day": 55.899809172620266, "Country": "Switzerland", "__folium_color": "#c2df23", "diameter_mm": 1219.0, "name": "PLL_507_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.43854, 47.43527, 7.600275, 47.46597], "geometry": {"coordinates": [[7.600275, 47.43527], [7.43854, 47.46597]], "type": "LineString"}, "id": "5809", "properties": {"Capacity in Million m^3/day": 19.618598434835253, "Country": "Switzerland", "__folium_color": "#355e8d", "diameter_mm": 900.0, "name": "PLM_2090_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.43854, 47.43527, 7.600275, 47.46597], "geometry": {"coordinates": [[7.43854, 47.46597], [7.600275, 47.43527]], "type": "LineString"}, "id": "5875", "properties": {"Capacity in Million m^3/day": 19.618598434835253, "Country": "Switzerland", "__folium_color": "#355e8d", "diameter_mm": 900.0, "name": "PLL_504_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [6.43633, 46.39107, 6.53896, 46.50458], "geometry": {"coordinates": [[6.43633, 46.39107], [6.53896, 46.50458]], "type": "LineString"}, "id": "5950", "properties": {"Capacity in Million m^3/day": 3.2902940872773025, "Country": "Switzerland", "__folium_color": "#46085c", "diameter_mm": 900.0, "name": "PLS_5208_Seg_0_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [8.723711, 47.743693, 8.868479, 47.770212], "geometry": {"coordinates": [[8.868479, 47.770212], [8.723711, 47.743693]], "type": "LineString"}, "id": "6003", "properties": {"Capacity in Million m^3/day": 3.852038590666667, "Country": "Switzerland", "__folium_color": "#460b5e", "diameter_mm": 500.0, "name": "LKD_PS_1050_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.43965, 47.56344, 7.673591, 47.67993], "geometry": {"coordinates": [[7.43965, 47.67993], [7.673591, 47.56344]], "type": "LineString"}, "id": "6005", "properties": {"Capacity in Million m^3/day": 2.0, "Country": "Switzerland", "__folium_color": "#440154", "diameter_mm": 1200.0, "name": "ST_1129_Seg_0_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [7.827246, 47.52102, 7.87495, 47.616503], "geometry": {"coordinates": [[7.87495, 47.52102], [7.827246, 47.616503]], "type": "LineString"}, "id": "6006", "properties": {"Capacity in Million m^3/day": 27.96749974185707, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 1200.0, "name": "PLS_6135_Seg_0_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [7.600275, 47.43527, 7.673591, 47.56344], "geometry": {"coordinates": [[7.600275, 47.43527], [7.673591, 47.56344]], "type": "LineString"}, "id": "6030", "properties": {"Capacity in Million m^3/day": 2.0, "Country": "Switzerland", "__folium_color": "#440154", "diameter_mm": 900.0, "name": "PLS_5745_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.994275, 47.47335, 9.00524, 47.847184], "geometry": {"coordinates": [[8.994275, 47.847184], [9.00524, 47.47335]], "type": "LineString"}, "id": "6031", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5891_Seg_0_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [9.59059, 47.48454, 9.60093, 47.53777], "geometry": {"coordinates": [[9.59059, 47.48454], [9.60093, 47.53777]], "type": "LineString"}, "id": "6032", "properties": {"Capacity in Million m^3/day": 2.2345847544610558, "Country": "Switzerland", "__folium_color": "#440256", "diameter_mm": 900.0, "name": "PLS_6000_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.68459, 47.73421, 8.868479, 47.770212], "geometry": {"coordinates": [[8.868479, 47.770212], [8.68459, 47.73421]], "type": "LineString"}, "id": "6035", "properties": {"Capacity in Million m^3/day": 2.0, "Country": "Switzerland", "__folium_color": "#440154", "diameter_mm": 900.0, "name": "PLS_6355_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.673591, 47.5397, 7.7069, 47.56344], "geometry": {"coordinates": [[7.673591, 47.56344], [7.7069, 47.5397]], "type": "LineString"}, "id": "6050", "properties": {"Capacity in Million m^3/day": 2.0, "Country": "Switzerland", "__folium_color": "#440154", "diameter_mm": 900.0, "name": "EntsoG_Map__ST_46_Seg_0"}, "type": "Feature"}, {"bbox": [8.41674, 45.926835, 8.45322, 46.3579], "geometry": {"coordinates": [[8.41674, 46.3579], [8.45322, 45.926835]], "type": "LineString"}, "id": "6172", "properties": {"Capacity in Million m^3/day": 2.0, "Country": "Switzerland", "__folium_color": "#440154", "diameter_mm": 1219.0, "name": "PLL_507_Seg_0_Seg_0_Seg_1"}, "type": "Feature"}, {"bbox": [9.00524, 47.47335, 9.59059, 47.48454], "geometry": {"coordinates": [[9.00524, 47.47335], [9.59059, 47.48454]], "type": "LineString"}, "id": "6271", "properties": {"Capacity in Million m^3/day": 27.809143341935314, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 900.0, "name": "PLS_5735_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [7.87495, 47.408115, 7.995595, 47.52102], "geometry": {"coordinates": [[7.995595, 47.408115], [7.87495, 47.52102]], "type": "LineString"}, "id": "6291", "properties": {"Capacity in Million m^3/day": 27.96749974185707, "Country": "Switzerland", "__folium_color": "#26818e", "diameter_mm": 1200.0, "name": "PLS_6135_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [8.584275, 47.503305, 8.68459, 47.73421], "geometry": {"coordinates": [[8.68459, 47.73421], [8.584275, 47.503305]], "type": "LineString"}, "id": "6308", "properties": {"Capacity in Million m^3/day": 2.0, "Country": "Switzerland", "__folium_color": "#440154", "diameter_mm": 900.0, "name": "PLS_6355_Seg_0_Seg_0_Seg_1"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_b4b00773fef231ee3783787c3aa61484.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["diameter_mm", "Capacity in Million m^3/day"];
+    let aliases = ["diameter_mm", "Capacity in Million m^3/day"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_b4b00773fef231ee3783787c3aa61484.addTo(map_3ce3eae8a46e0e3a9103b7f4298af377);
+        
+    
+    var color_map_d8c8ee017ea1093a20f7bb54c3484568 = {};
+
+    
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.color = d3.scale.threshold()
+              .domain([2.0, 2.118997122172345, 2.2379942443446894, 2.3569913665170343, 2.475988488689379, 2.5949856108617233, 2.7139827330340682, 2.832979855206413, 2.9519769773787576, 3.070974099551102, 3.189971221723447, 3.308968343895792, 3.4279654660681365, 3.5469625882404814, 3.6659597104128263, 3.784956832585171, 3.9039539547575153, 4.022951076929861, 4.141948199102204, 4.26094532127455, 4.379942443446894, 4.498939565619239, 4.617936687791584, 4.736933809963928, 4.855930932136273, 4.974928054308618, 5.093925176480963, 5.212922298653307, 5.331919420825653, 5.450916542997996, 5.569913665170342, 5.688910787342686, 5.8079079095150306, 5.926905031687376, 6.04590215385972, 6.164899276032066, 6.283896398204409, 6.402893520376755, 6.521890642549099, 6.640887764721445, 6.759884886893788, 6.878882009066134, 6.997879131238478, 7.1168762534108225, 7.235873375583167, 7.354870497755512, 7.473867619927857, 7.592864742100201, 7.711861864272547, 7.830858986444891, 7.949856108617237, 8.06885323078958, 8.187850352961926, 8.30684747513427, 8.425844597306615, 8.54484171947896, 8.663838841651305, 8.782835963823649, 8.901833085995992, 9.020830208168338, 9.139827330340683, 9.258824452513029, 9.377821574685372, 9.496818696857716, 9.615815819030061, 9.734812941202406, 9.853810063374752, 9.972807185547097, 10.09180430771944, 10.210801429891786, 10.329798552064132, 10.448795674236473, 10.567792796408819, 10.686789918581164, 10.80578704075351, 10.924784162925853, 11.043781285098198, 11.162778407270544, 11.28177552944289, 11.400772651615231, 11.519769773787576, 11.638766895959922, 11.757764018132267, 11.876761140304612, 11.995758262476956, 12.114755384649301, 12.233752506821645, 12.35274962899399, 12.471746751166334, 12.59074387333868, 12.709740995511025, 12.82873811768337, 12.947735239855714, 13.066732362028057, 13.185729484200403, 13.304726606372748, 13.423723728545093, 13.542720850717437, 13.661717972889782, 13.780715095062128, 13.899712217234473, 14.018709339406815, 14.13770646157916, 14.256703583751506, 14.375700705923851, 14.494697828096195, 14.61369495026854, 14.732692072440885, 14.851689194613229, 14.970686316785573, 15.089683438957918, 15.208680561130263, 15.327677683302609, 15.446674805474954, 15.565671927647298, 15.684669049819643, 15.803666171991987, 15.922663294164332, 16.041660416336676, 16.16065753850902, 16.279654660681366, 16.39865178285371, 16.517648905026057, 16.6366460271984, 16.755643149370744, 16.87464027154309, 16.99363739371543, 17.112634515887777, 17.231631638060122, 17.350628760232468, 17.469625882404813, 17.58862300457716, 17.707620126749504, 17.82661724892185, 17.945614371094194, 18.064611493266536, 18.18360861543888, 18.302605737611227, 18.421602859783572, 18.540599981955914, 18.659597104128263, 18.778594226300605, 18.897591348472947, 19.016588470645296, 19.135585592817637, 19.254582714989986, 19.37357983716233, 19.492576959334674, 19.61157408150702, 19.73057120367936, 19.849568325851706, 19.96856544802405, 20.087562570196397, 20.206559692368742, 20.325556814541088, 20.44455393671343, 20.56355105888578, 20.68254818105812, 20.801545303230462, 20.92054242540281, 21.039539547575153, 21.1585366697475, 21.277533791919844, 21.39653091409219, 21.515528036264534, 21.634525158436876, 21.753522280609225, 21.872519402781567, 21.991516524953912, 22.110513647126258, 22.229510769298603, 22.348507891470945, 22.46750501364329, 22.586502135815635, 22.70549925798798, 22.824496380160326, 22.943493502332668, 23.062490624505017, 23.18148774667736, 23.300484868849704, 23.41948199102205, 23.53847911319439, 23.65747623536674, 23.776473357539082, 23.895470479711427, 24.014467601883773, 24.133464724056115, 24.252461846228464, 24.371458968400805, 24.49045609057315, 24.609453212745496, 24.72845033491784, 24.847447457090187, 24.966444579262532, 25.085441701434874, 25.20443882360722, 25.323435945779565, 25.442433067951907, 25.561430190124256, 25.680427312296597, 25.799424434468946, 25.918421556641288, 26.03741867881363, 26.15641580098598, 26.27541292315832, 26.394410045330666, 26.51340716750301, 26.632404289675357, 26.751401411847702, 26.870398534020044, 26.98939565619239, 27.108392778364735, 27.22738990053708, 27.346387022709425, 27.46538414488177, 27.584381267054113, 27.703378389226458, 27.822375511398803, 27.941372633571145, 28.060369755743494, 28.179366877915836, 28.298364000088185, 28.417361122260527, 28.536358244432872, 28.655355366605217, 28.77435248877756, 28.893349610949908, 29.01234673312225, 29.131343855294595, 29.25034097746694, 29.369338099639286, 29.488335221811628, 29.607332343983973, 29.72632946615632, 29.845326588328664, 29.96432371050101, 30.08332083267335, 30.2023179548457, 30.321315077018042, 30.440312199190384, 30.559309321362733, 30.678306443535075, 30.797303565707423, 30.916300687879765, 31.03529781005211, 31.154294932224456, 31.273292054396798, 31.392289176569147, 31.51128629874149, 31.630283420913834, 31.74928054308618, 31.868277665258525, 31.987274787430866, 32.106271909603215, 32.225269031775554, 32.3442661539479, 32.463263276120244, 32.58226039829259, 32.701257520464935, 32.82025464263728, 32.939251764809626, 33.05824888698197, 33.17724600915432, 33.29624313132666, 33.41524025349901, 33.53423737567135, 33.6532344978437, 33.77223162001604, 33.89122874218839, 34.01022586436073, 34.12922298653307, 34.24822010870542, 34.36721723087776, 34.48621435305011, 34.605211475222454, 34.7242085973948, 34.843205719567145, 34.96220284173949, 35.08119996391183, 35.200197086084174, 35.319194208256526, 35.438191330428864, 35.55718845260121, 35.676185574773555, 35.79518269694589, 35.914179819118246, 36.03317694129059, 36.15217406346293, 36.271171185635275, 36.39016830780763, 36.50916542997997, 36.62816255215231, 36.74715967432466, 36.866156796497, 36.98515391866935, 37.10415104084169, 37.22314816301404, 37.342145285186376, 37.46114240735872, 37.580139529531074, 37.69913665170341, 37.81813377387576, 37.9371308960481, 38.05612801822045, 38.175125140392794, 38.29412226256514, 38.413119384737485, 38.53211650690982, 38.651113629082175, 38.77011075125452, 38.88910787342686, 39.008104995599204, 39.12710211777156, 39.246099239943895, 39.36509636211624, 39.484093484288586, 39.603090606460924, 39.72208772863328, 39.84108485080562, 39.96008197297797, 40.079079095150306, 40.19807621732265, 40.317073339495, 40.43607046166734, 40.55506758383969, 40.67406470601203, 40.79306182818438, 40.91205895035672, 41.03105607252907, 41.15005319470141, 41.26905031687375, 41.388047439046105, 41.50704456121845, 41.62604168339079, 41.745038805563134, 41.864035927735486, 41.983033049907824, 42.10203017208017, 42.221027294252515, 42.34002441642485, 42.459021538597206, 42.57801866076955, 42.69701578294189, 42.816012905114235, 42.93501002728658, 43.05400714945893, 43.17300427163127, 43.292001393803616, 43.41099851597596, 43.52999563814831, 43.64899276032065, 43.767989882493, 43.886987004665336, 44.00598412683768, 44.124981249010034, 44.24397837118237, 44.36297549335472, 44.48197261552706, 44.60096973769941, 44.719966859871754, 44.8389639820441, 44.957961104216444, 45.07695822638878, 45.195955348561135, 45.31495247073348, 45.43394959290582, 45.552946715078164, 45.67194383725051, 45.790940959422855, 45.9099380815952, 46.028935203767546, 46.14793232593989, 46.26692944811223, 46.38592657028458, 46.50492369245693, 46.623920814629265, 46.74291793680161, 46.86191505897396, 46.9809121811463, 47.09990930331865, 47.21890642549099, 47.33790354766333, 47.45690066983568, 47.57589779200803, 47.694894914180374, 47.81389203635271, 47.932889158525064, 48.05188628069741, 48.17088340286975, 48.28988052504209, 48.40887764721444, 48.527874769386784, 48.64687189155913, 48.765869013731475, 48.88486613590381, 49.00386325807616, 49.12286038024851, 49.24185750242085, 49.360854624593195, 49.47985174676554, 49.59884886893789, 49.71784599111023, 49.836843113282576, 49.95584023545492, 50.07483735762726, 50.19383447979961, 50.31283160197196, 50.431828724144296, 50.55082584631664, 50.669822968488994, 50.78882009066133, 50.90781721283368, 51.02681433500602, 51.14581145717837, 51.264808579350714, 51.38380570152306, 51.502802823695404, 51.62179994586774, 51.74079706804009, 51.85979419021244, 51.97879131238478, 52.097788434557124, 52.21678555672947, 52.335782678901815, 52.45477980107416, 52.573776923246506, 52.69277404541885, 52.81177116759119, 52.93076828976354, 53.04976541193589, 53.168762534108225, 53.28775965628057, 53.406756778452916, 53.52575390062526, 53.64475102279761, 53.76374814496995, 53.88274526714229, 54.00174238931464, 54.12073951148699, 54.239736633659334, 54.35873375583167, 54.47773087800402, 54.59672800017637, 54.71572512234871, 54.83472224452105, 54.9537193666934, 55.072716488865744, 55.19171361103809, 55.310710733210435, 55.42970785538277, 55.54870497755512, 55.66770209972747, 55.786699221899816, 55.905696344072155, 56.0246934662445, 56.143690588416845, 56.26268771058919, 56.381684832761536, 56.50068195493388, 56.61967907710622, 56.73867619927857, 56.85767332145092, 56.976670443623256, 57.0956675657956, 57.21466468796795, 57.3336618101403, 57.45265893231264, 57.57165605448498, 57.69065317665733, 57.809650298829666, 57.92864742100202, 58.047644543174364, 58.1666416653467, 58.28563878751905, 58.4046359096914, 58.52363303186374, 58.642630154036084, 58.76162727620843, 58.88062439838077, 58.99962152055312, 59.118618642725465, 59.23761576489781, 59.35661288707015, 59.4756100092425, 59.59460713141485, 59.713604253587185, 59.83260137575953, 59.951598497931876, 60.07059562010422, 60.18959274227657, 60.30858986444891, 60.42758698662125, 60.546584108793596, 60.66558123096595, 60.78457835313829, 60.90357547531063, 61.02257259748298, 61.14156971965533, 61.26056684182767, 61.37956396400001])
+              .range(['#440154ff', '#440155ff', '#440256ff', '#440356ff', '#450457ff', '#450458ff', '#450559ff', '#450659ff', '#46075aff', '#46075bff', '#46085cff', '#46095cff', '#460a5dff', '#460a5eff', '#460b5eff', '#460c5fff', '#470d60ff', '#470d61ff', '#470e61ff', '#470f62ff', '#471063ff', '#471064ff', '#471164ff', '#471265ff', '#471365ff', '#481366ff', '#481467ff', '#481568ff', '#481668ff', '#481669ff', '#481769ff', '#48176aff', '#48186bff', '#48196cff', '#481a6cff', '#481a6dff', '#481b6dff', '#481c6eff', '#481c6eff', '#481d6fff', '#481d6fff', '#481f70ff', '#481f70ff', '#482071ff', '#482072ff', '#482173ff', '#482273ff', '#482374ff', '#482374ff', '#482475ff', '#482476ff', '#482576ff', '#482577ff', '#482677ff', '#482778ff', '#482878ff', '#482879ff', '#482979ff', '#47297aff', '#472a7aff', '#472b7aff', '#472c7aff', '#472c7bff', '#472d7bff', '#472d7cff', '#472e7cff', '#472e7dff', '#472f7dff', '#462f7eff', '#46307eff', '#46317eff', '#46327eff', '#46327fff', '#46337fff', '#463480ff', '#453480ff', '#453581ff', '#453581ff', '#453681ff', '#453781ff', '#453882ff', '#443882ff', '#443983ff', '#443983ff', '#443a83ff', '#443a83ff', '#443b84ff', '#433c84ff', '#433d84ff', '#433d85ff', '#433e85ff', '#423e85ff', '#423f85ff', '#423f86ff', '#424086ff', '#424086ff', '#424186ff', '#414187ff', '#414287ff', '#414387ff', '#414487ff', '#404488ff', '#404588ff', '#404588ff', '#404688ff', '#3f4688ff', '#3f4788ff', '#3f4789ff', '#3f4889ff', '#3e4889ff', '#3e4989ff', '#3e4a89ff', '#3e4a89ff', '#3e4b8aff', '#3d4c8aff', '#3d4d8aff', '#3d4d8aff', '#3d4e8aff', '#3c4e8aff', '#3c4f8aff', '#3c4f8aff', '#3c508bff', '#3b508bff', '#3b518bff', '#3b518bff', '#3b528bff', '#3a528bff', '#3a538bff', '#3a538bff', '#3a548cff', '#39548cff', '#39558cff', '#39558cff', '#39568cff', '#38578cff', '#38588cff', '#38588cff', '#38598cff', '#37598cff', '#375a8cff', '#375a8dff', '#375b8dff', '#365b8dff', '#365c8dff', '#365c8dff', '#365d8dff', '#355d8dff', '#355e8dff', '#355f8dff', '#355f8dff', '#34608dff', '#34608dff', '#34618dff', '#34618dff', '#33628dff', '#33628dff', '#33638dff', '#32638dff', '#32648eff', '#32648eff', '#32658eff', '#31658eff', '#31668eff', '#31668eff', '#31678eff', '#31678eff', '#31688eff', '#30688eff', '#30698eff', '#30698eff', '#306a8eff', '#2f6a8eff', '#2f6b8eff', '#2f6b8eff', '#2f6c8eff', '#2e6c8eff', '#2e6d8eff', '#2e6d8eff', '#2e6e8eff', '#2e6e8eff', '#2e6f8eff', '#2d6f8eff', '#2d708eff', '#2d708eff', '#2d718eff', '#2c718eff', '#2c718eff', '#2c728eff', '#2c728eff', '#2c738eff', '#2c738eff', '#2b748eff', '#2b748eff', '#2b758eff', '#2b758eff', '#2a768eff', '#2a768eff', '#2a778eff', '#2a778eff', '#2a788eff', '#29788eff', '#29798eff', '#29798eff', '#297a8eff', '#297a8eff', '#297b8eff', '#287b8eff', '#287c8eff', '#287c8eff', '#287d8eff', '#277d8eff', '#277e8eff', '#277e8eff', '#277f8eff', '#277f8eff', '#27808eff', '#26808eff', '#26818eff', '#26818eff', '#26828eff', '#26828eff', '#26828eff', '#25828eff', '#25838eff', '#25838eff', '#25848eff', '#25858eff', '#25858eff', '#24868eff', '#24868eff', '#24878eff', '#24878eff', '#23888eff', '#23888eff', '#23898eff', '#23898eff', '#238a8dff', '#238a8dff', '#228b8dff', '#228b8dff', '#228c8dff', '#228c8dff', '#228d8dff', '#218d8dff', '#218e8dff', '#218e8dff', '#218f8dff', '#218f8dff', '#21908dff', '#21908dff', '#21918cff', '#20918cff', '#20928cff', '#20928cff', '#20928cff', '#20928cff', '#20938cff', '#1f938cff', '#1f948cff', '#1f948cff', '#1f958bff', '#1f958bff', '#1f968bff', '#1f968bff', '#1f978bff', '#1f988bff', '#1f988bff', '#1f998bff', '#1f998aff', '#1f9a8aff', '#1f9a8aff', '#1e9b8aff', '#1e9b8aff', '#1e9c8aff', '#1e9c89ff', '#1e9d89ff', '#1e9d89ff', '#1e9e89ff', '#1f9e89ff', '#1f9f88ff', '#1f9f88ff', '#1fa088ff', '#1fa088ff', '#1fa188ff', '#1fa188ff', '#1fa187ff', '#1fa187ff', '#1fa287ff', '#1fa287ff', '#1fa386ff', '#20a386ff', '#20a486ff', '#20a486ff', '#20a585ff', '#21a585ff', '#21a685ff', '#21a685ff', '#21a785ff', '#22a785ff', '#22a884ff', '#22a884ff', '#22a983ff', '#23a983ff', '#23aa83ff', '#24ab83ff', '#25ab82ff', '#25ac82ff', '#25ac82ff', '#25ad82ff', '#26ad81ff', '#26ad81ff', '#27ad81ff', '#27ae81ff', '#28ae80ff', '#28af80ff', '#29af7fff', '#29b07fff', '#2ab07fff', '#2bb17eff', '#2cb17eff', '#2cb27dff', '#2db27dff', '#2db37cff', '#2eb37cff', '#2eb47cff', '#2fb47cff', '#30b57bff', '#31b57bff', '#31b67aff', '#32b67aff', '#33b679ff', '#34b679ff', '#34b779ff', '#35b779ff', '#36b878ff', '#37b878ff', '#37b977ff', '#38b977ff', '#39ba76ff', '#3aba76ff', '#3abb75ff', '#3bbb75ff', '#3cbc74ff', '#3dbc74ff', '#3ebc73ff', '#3fbd73ff', '#40bd72ff', '#40be72ff', '#41be71ff', '#42bf71ff', '#43bf70ff', '#45c070ff', '#46c06fff', '#47c16fff', '#48c16eff', '#49c16eff', '#4ac16dff', '#4bc26cff', '#4cc26cff', '#4dc36bff', '#4ec36bff', '#4fc46aff', '#50c46aff', '#51c569ff', '#52c569ff', '#53c568ff', '#54c568ff', '#55c667ff', '#56c667ff', '#57c766ff', '#58c765ff', '#59c864ff', '#5ac864ff', '#5bc863ff', '#5cc863ff', '#5dc962ff', '#5ec962ff', '#5fca61ff', '#60ca60ff', '#62cb5fff', '#63cb5fff', '#64cb5eff', '#65cc5dff', '#66cc5cff', '#67cd5cff', '#68cd5bff', '#6acd5bff', '#6bcd5aff', '#6cce59ff', '#6ece58ff', '#6fcf58ff', '#70cf57ff', '#71d057ff', '#72d056ff', '#74d055ff', '#75d054ff', '#76d153ff', '#77d153ff', '#78d152ff', '#7ad151ff', '#7bd250ff', '#7cd250ff', '#7dd34fff', '#7fd34eff', '#80d34dff', '#81d34dff', '#82d44cff', '#84d44bff', '#85d54aff', '#86d549ff', '#88d548ff', '#89d548ff', '#8ad647ff', '#8bd646ff', '#8dd645ff', '#8ed645ff', '#8fd744ff', '#90d743ff', '#92d742ff', '#93d741ff', '#94d840ff', '#96d83fff', '#97d83eff', '#99d93dff', '#9ad93cff', '#9bd93cff', '#9dd93bff', '#9eda3aff', '#9fda39ff', '#a1da38ff', '#a2da37ff', '#a3db36ff', '#a4db36ff', '#a6db35ff', '#a8db34ff', '#a9dc33ff', '#aadc32ff', '#abdc31ff', '#addc30ff', '#aedd2fff', '#b0dd2fff', '#b1dd2eff', '#b2dd2dff', '#b3de2cff', '#b5de2bff', '#b6de2aff', '#b8de29ff', '#b9de28ff', '#bade28ff', '#bcdf27ff', '#bddf26ff', '#bfdf25ff', '#c0df25ff', '#c1df24ff', '#c2df23ff', '#c4e022ff', '#c5e021ff', '#c7e020ff', '#c8e020ff', '#c9e11fff', '#cbe11eff', '#cce11dff', '#cee11dff', '#cfe11cff', '#d1e11bff', '#d2e21bff', '#d3e21aff', '#d4e21aff', '#d6e219ff', '#d7e219ff', '#d9e319ff', '#dae319ff', '#dbe318ff', '#dde318ff', '#dee318ff', '#dfe318ff', '#e0e418ff', '#e2e418ff', '#e3e418ff', '#e5e418ff', '#e6e419ff', '#e7e419ff', '#e8e519ff', '#eae519ff', '#ebe51aff', '#ece51aff', '#ede51bff', '#efe51bff', '#f0e51cff', '#f1e51dff', '#f3e61dff', '#f4e61eff', '#f5e61eff', '#f6e61fff', '#f7e620ff', '#f8e621ff', '#fae722ff', '#fbe723ff', '#fce724ff', '#fde725ff']);
+    
+
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.x = d3.scale.linear()
+              .domain([2.0, 61.37956396400001])
+              .range([0, 450 - 50]);
+
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.legend = L.control({position: 'topright'});
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.legend.addTo(map_3ce3eae8a46e0e3a9103b7f4298af377);
+
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.xAxis = d3.svg.axis()
+        .scale(color_map_d8c8ee017ea1093a20f7bb54c3484568.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([2.0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 8.054386913976472, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 14.108773827952945, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 20.163160741929417, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 26.21754765590589, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 32.27193456988236, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 38.326321483858834, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 44.380708397835306, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 50.43509531181178, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 56.48948222578825, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
+
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.g = color_map_d8c8ee017ea1093a20f7bb54c3484568.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.g.selectAll("rect")
+        .data(color_map_d8c8ee017ea1093a20f7bb54c3484568.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_d8c8ee017ea1093a20f7bb54c3484568.x(color_map_d8c8ee017ea1093a20f7bb54c3484568.color.domain()[i - 1]) : color_map_d8c8ee017ea1093a20f7bb54c3484568.x.range()[0],
+            x1: i < color_map_d8c8ee017ea1093a20f7bb54c3484568.color.domain().length ? color_map_d8c8ee017ea1093a20f7bb54c3484568.x(color_map_d8c8ee017ea1093a20f7bb54c3484568.color.domain()[i]) : color_map_d8c8ee017ea1093a20f7bb54c3484568.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_d8c8ee017ea1093a20f7bb54c3484568.g.call(color_map_d8c8ee017ea1093a20f7bb54c3484568.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text("Capacity in Million m^3/day");
+</script>
+</html>

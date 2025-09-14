@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d3bb505397394965598cd27658c3c192 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d3bb505397394965598cd27658c3c192" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d3bb505397394965598cd27658c3c192 = L.map(
+                "map_d3bb505397394965598cd27658c3c192",
+                {
+                    center: [40.529237, 20.6325],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_d3bb505397394965598cd27658c3c192);
+
+            
+
+        
+    
+            var tile_layer_b75efec98aef518bb598e5b3ab04d572 = L.tileLayer(
+                "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b75efec98aef518bb598e5b3ab04d572.addTo(map_d3bb505397394965598cd27658c3c192);
+        
+    
+        function geo_json_fddcc48c6917727e1d77dac3330a4046_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#440154", "fillColor": "#440154", "fillOpacity": 0.5, "weight": 3};
+            }
+        }
+        function geo_json_fddcc48c6917727e1d77dac3330a4046_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_fddcc48c6917727e1d77dac3330a4046_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 2,
+};
+            
+            let style = geo_json_fddcc48c6917727e1d77dac3330a4046_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_fddcc48c6917727e1d77dac3330a4046_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_fddcc48c6917727e1d77dac3330a4046.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_fddcc48c6917727e1d77dac3330a4046_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_fddcc48c6917727e1d77dac3330a4046 = L.geoJson(null, {
+                onEachFeature: geo_json_fddcc48c6917727e1d77dac3330a4046_onEachFeature,
+            
+                style: geo_json_fddcc48c6917727e1d77dac3330a4046_styler,
+                pointToLayer: geo_json_fddcc48c6917727e1d77dac3330a4046_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_fddcc48c6917727e1d77dac3330a4046_add (data) {
+            geo_json_fddcc48c6917727e1d77dac3330a4046
+                .addData(data);
+        }
+            geo_json_fddcc48c6917727e1d77dac3330a4046_add({"bbox": [18.38, 40.265, 22.885, 40.793474], "features": [{"bbox": [19.451467, 40.581944, 21.000003, 40.793474], "geometry": {"coordinates": [[21.000003, 40.581944], [19.451467, 40.793474]], "type": "LineString"}, "id": "9", "properties": {"Capacity in Million m^3/day": 27.397, "Country": "Albania", "__folium_color": "#440154", "diameter_mm": 914.0, "name": "INET_PL_667_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [18.38, 40.265, 19.451467, 40.793474], "geometry": {"coordinates": [[19.451467, 40.793474], [18.38, 40.265]], "type": "LineString"}, "id": "5746", "properties": {"Capacity in Million m^3/day": 27.397, "Country": "Albania", "__folium_color": "#440154", "diameter_mm": 914.0, "name": "INET_PL_669_EE_0_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}, {"bbox": [21.000003, 40.581944, 22.885, 40.6872], "geometry": {"coordinates": [[22.885, 40.6872], [21.000003, 40.581944]], "type": "LineString"}, "id": "6087", "properties": {"Capacity in Million m^3/day": 27.397, "Country": "Albania", "__folium_color": "#440154", "diameter_mm": 1219.0, "name": "INET_PL_659_EE_5_Seg_0_Seg_0_Seg_0"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_fddcc48c6917727e1d77dac3330a4046.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["diameter_mm", "Capacity in Million m^3/day"];
+    let aliases = ["diameter_mm", "Capacity in Million m^3/day"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_fddcc48c6917727e1d77dac3330a4046.addTo(map_d3bb505397394965598cd27658c3c192);
+        
+    
+    var color_map_61f440f38be8c945cd81a83576fd423f = {};
+
+    
+    color_map_61f440f38be8c945cd81a83576fd423f.color = d3.scale.threshold()
+              .domain([27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397, 27.397])
+              .range(['#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff', '#440154ff']);
+    
+
+    color_map_61f440f38be8c945cd81a83576fd423f.x = d3.scale.linear()
+              .domain([27.397, 27.397])
+              .range([0, 450 - 50]);
+
+    color_map_61f440f38be8c945cd81a83576fd423f.legend = L.control({position: 'topright'});
+    color_map_61f440f38be8c945cd81a83576fd423f.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_61f440f38be8c945cd81a83576fd423f.legend.addTo(map_d3bb505397394965598cd27658c3c192);
+
+    color_map_61f440f38be8c945cd81a83576fd423f.xAxis = d3.svg.axis()
+        .scale(color_map_61f440f38be8c945cd81a83576fd423f.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 27.397, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
+
+    color_map_61f440f38be8c945cd81a83576fd423f.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_61f440f38be8c945cd81a83576fd423f.g = color_map_61f440f38be8c945cd81a83576fd423f.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_61f440f38be8c945cd81a83576fd423f.g.selectAll("rect")
+        .data(color_map_61f440f38be8c945cd81a83576fd423f.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_61f440f38be8c945cd81a83576fd423f.x(color_map_61f440f38be8c945cd81a83576fd423f.color.domain()[i - 1]) : color_map_61f440f38be8c945cd81a83576fd423f.x.range()[0],
+            x1: i < color_map_61f440f38be8c945cd81a83576fd423f.color.domain().length ? color_map_61f440f38be8c945cd81a83576fd423f.x(color_map_61f440f38be8c945cd81a83576fd423f.color.domain()[i]) : color_map_61f440f38be8c945cd81a83576fd423f.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_61f440f38be8c945cd81a83576fd423f.g.call(color_map_61f440f38be8c945cd81a83576fd423f.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text("Capacity in Million m^3/day");
+</script>
+</html>
