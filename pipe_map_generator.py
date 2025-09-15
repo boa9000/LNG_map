@@ -92,7 +92,7 @@ for country in countries:
     body1 += f"""<button class="tablinks" onclick="openTab(event,'{country}')">{country}</button>\n"""
     body2 += f"""
 <div id="{country}" class="tabcontent">
-  <iframe src="maps/pipes_map_{country}.html" width="100%" height="100%" loading="lazy"></iframe>
+  <iframe src="maps/pipes_map_{country}.html" width="100%" height="90%" loading="lazy"></iframe>
 </div>
 
 """
@@ -101,4 +101,5 @@ for country in countries:
 html = header + body1 + body2 + footer
 
 with open("all_pipeline_maps.html", "w", encoding="utf-8") as f:
+
     f.write(html)
