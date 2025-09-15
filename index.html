@@ -19,6 +19,7 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; }
 <div class="tab">
 
 <button class="tablinks" onclick="openTab(event,'Germany')">Germany</button>
+<button class="tablinks" onclick="openTab(event,'Europe')">Europe</button>
 <button class="tablinks" onclick="openTab(event,'Albania')">Albania</button>
 <button class="tablinks" onclick="openTab(event,'Austria')">Austria</button>
 <button class="tablinks" onclick="openTab(event,'Belarus')">Belarus</button>
@@ -54,6 +55,11 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; }
 <button class="tablinks" onclick="openTab(event,'Switzerland')">Switzerland</button>
 <button class="tablinks" onclick="openTab(event,'Ukraine')">Ukraine</button>
 <button class="tablinks" onclick="openTab(event,'United Kingdom')">United Kingdom</button>
+
+<div id="Europe" class="tabcontent">
+  <iframe src="maps/pipes_map_Europe.html" width="100%" height="90%" loading="lazy"></iframe>
+</div>
+  
 <div id="Albania" class="tabcontent">
   <iframe src="maps/pipes_map_Albania.html" width="100%" height="90%" loading="lazy"></iframe>
 </div>
@@ -260,6 +266,7 @@ document.getElementsByClassName('tablinks')[0].click();
 
 </body>
 </html>
+
 
 
 
