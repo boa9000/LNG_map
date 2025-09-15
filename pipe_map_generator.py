@@ -18,6 +18,9 @@ os.makedirs("maps", exist_ok=True)
 
 countries = pipes_in_europe["Country"].unique()
 countries.sort()
+countries = list(countries)
+countries.remove("Germany")
+countries.insert(0, "Germany")
 
 for country in countries:
     bounds = pipes_in_europe[pipes_in_europe["Country"] == country].total_bounds
@@ -34,6 +37,23 @@ for country in countries:
     zoom_start=6,
     )
     m.save(f"maps/pipes_map_{country}.html")
+
+bounds = pipes_in_europe.total_bounds
+lat = (bounds[1] + bounds[3]) / 2
+lon = (bounds[0] + bounds[2]) / 2
+m = pipes_in_europe.explore(
+            column="Capacity in Million m^3/day",    
+            cmap="viridis",        
+            legend=True,          
+            tooltip=["diameter_mm", "Capacity in Million m^3/day"],   
+            style_kwds={"weight": 2}, 
+            tiles="CartoDB positron",
+            location=[lat, lon],
+            zoom_start=5,
+            )
+m.save(f"maps/pipes_map_Europe.html")
+countries.insert(1, "Europe")
+
 
 header = """<!DOCTYPE html>
 <html lang="en">
@@ -101,5 +121,4 @@ for country in countries:
 html = header + body1 + body2 + footer
 
 with open("all_pipeline_maps.html", "w", encoding="utf-8") as f:
-
     f.write(html)
