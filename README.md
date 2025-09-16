@@ -1,6 +1,6 @@
 a simple script to get the maps for the gas networks in Europe. To run it:
 ```bash
-python pipe_map-generator.py
+python pipe_map_generator.py
 ```
 Or you can check the .ipynb file for a jupyter notebook implementation instead. 
 
